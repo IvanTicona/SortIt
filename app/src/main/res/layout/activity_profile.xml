@@ -25,6 +25,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="56dp"
+        android:contentDescription="@string/buscar_icon"
         android:src="@drawable/buscaricon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -35,6 +36,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="22dp"
+        android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsicon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -61,7 +63,8 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/pfpicon"/>
+                android:background="@drawable/pfpicon"
+                android:contentDescription="@string/pfp_icon" />
 
             <TextView
                 android:id="@+id/username"
@@ -302,18 +305,21 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"
+                android:contentDescription="@string/home_icon"
                 android:src="@drawable/homeicon" />
 
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"
+                android:contentDescription="@string/calendar_icon"
                 android:src="@drawable/calendaricon" />
 
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"
+                android:contentDescription="@string/person_icon"
                 android:src="@drawable/personicon" />
         </LinearLayout>
 

@@ -13,10 +13,10 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
-            android:name=".ListTasksScreenActivity"
+            android:name=".ListTasksScreen"
             android:exported="false" />
         <activity
-            android:name=".CreateTaskScreenActivity"
+            android:name=".CreateTaskScreen"
             android:exported="false" />
         <activity
             android:name=".HomeScreenActivity"

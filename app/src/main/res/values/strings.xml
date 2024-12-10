@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">SortIt</string>
+    <string name="continuar_con_google">Continuar con Google</string>
+    <string name="continuar_con_correo">Continuar con correo</string>
+    <string name="perfil">Perfil</string>
+    <string name="usuario_1">Usuario 1</string>
+    <string name="usuario1_gmail_com">usuario1@gmail.com</string>
+    <string name="resumen_de_tareas">Resumen de tareas</string>
+    <string name="_2">2</string>
+    <string name="tareas_completadas">Tareas completadas</string>
+    <string name="listar_actividades">Listar actividades</string>
+    <string name="ver_m_s"><![CDATA[Ver más >]]></string>
+    <string name="proyecto_progra_iii">Proyecto Progra III</string>
+    <string name="_07_12">07/12</string>
+    <string name="tarea_sistemas">Tarea Sistemas</string>
+    <string name="_4">4</string>
+    <string name="_09_12">09/12</string>
+    <string name="tareas_pendientes">Tareas pendientes</string>
+    <string name="app_icon">app icon</string>
+    <string name="home_icon">home icon</string>
+    <string name="calendar_icon">calendar icon</string>
+    <string name="person_icon">person icon</string>
+    <string name="settings_icon">settings icon</string>
+    <string name="buscar_icon">buscar icon</string>
+    <string name="pfp_icon">pfp icon</string>
 </resources>

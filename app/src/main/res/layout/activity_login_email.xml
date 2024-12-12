@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -20,20 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/sortiticon"
     />
-
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fields"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/blue"
-        app:layout_constraintEnd_toStartOf="parent"
-        android:elevation="1dp"
-    />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="280dp"
+        android:background="@color/darkpurple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="2dp"
@@ -50,11 +42,11 @@
         >
             <EditText
                 android:id="@+id/emailInput"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
+                android:layout_width="350dp"
+                android:layout_height="65dp"
                 android:backgroundTint="@color/white"
                 android:hint="Ingrese su correo"
-                android:padding="10dp"
+                android:paddingStart="20dp"
             />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -69,31 +61,36 @@
         >
             <EditText
                 android:id="@+id/passwordInput"
-                android:layout_width="300dp"
-                android:layout_height="70dp"
+                android:layout_width="350dp"
+                android:layout_height="65dp"
                 android:backgroundTint="@color/white"
                 android:hint="Ingrese su contrasenia"
-                android:padding="10dp"
+                android:paddingStart="20dp"
             />
         </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_height="70dp"
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="@id/SignInButton"
+            app:layout_constraintTop_toTopOf="@id/SignInButton"
+            app:layout_constraintBottom_toBottomOf="@id/SignInButton"
+            android:src="@drawable/signinicon"
+            android:elevation="2dp"
+            android:layout_marginStart="55dp"
+        />
+        <Button
             android:layout_marginTop="20dp"
+            android:id="@+id/SignInButton"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/purple"
             app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardElevation="0dp"
-        >
-            <Button
-                android:id="@+id/SignInButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="INGRESAR"
-                android:textSize="20sp"
-            />
-        </androidx.cardview.widget.CardView>
+            android:text="INGRESAR"
+            app:cornerRadius = "15dp"
+            android:textSize="20sp"
+        />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

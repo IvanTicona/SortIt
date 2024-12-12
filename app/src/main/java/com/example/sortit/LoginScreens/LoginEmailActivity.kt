@@ -1,7 +1,9 @@
 package com.example.sortit.LoginScreens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sortit.HomeScreenActivity
 import com.example.sortit.databinding.ActivityLoginEmailBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -34,9 +36,8 @@ class LoginEmailActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            println("Autenticado")
-        }else{
-            println("Usuario no autenticado")
+            val intentHomeScreen = Intent(this, HomeScreenActivity::class.java)
+//            startActivity(intentHomeScreen)
         }
     }
 
@@ -60,19 +61,15 @@ class LoginEmailActivity : AppCompatActivity() {
 
     fun signIn(email: String, password: String){
         // Validaciones
-
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){ task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     println("signInWithEmail:success")
-                    val user = auth.currentUser
-                    // updateUI(user)
+                    val intentHomeScreen = Intent(this, HomeScreenActivity::class.java)
+//                    startActivity(intentHomeScreen)
                 } else {
-                    // If sign in fails, display a message to the user.
                     println("signInWithEmail:failure")
                     println(task.exception)
-                    // updateUI(null)
                 }
             }
     }

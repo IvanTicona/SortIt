@@ -1,4 +1,4 @@
-package com.example.sortit
+package com.example.sortit.SettingScreens
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

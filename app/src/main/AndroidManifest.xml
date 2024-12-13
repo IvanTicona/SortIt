@@ -15,9 +15,7 @@
         <activity
             android:name=".UserPlanActivity"
             android:exported="false" />
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
+
         <activity
             android:name=".LoginScreens.LoginEmailActivity"
             android:exported="false"/>
@@ -36,6 +34,7 @@
         <activity
             android:name=".TaskScreens.ListTasksActivity"
             android:exported="false" />
+
         <activity
             android:name=".SettingScreens.SettingsActivity"
             android:exported="false" />

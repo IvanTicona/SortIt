@@ -13,29 +13,29 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
+            android:name=".LoginScreens.LoginEmailActivity"
+            android:exported="false"/>
+        <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ListTasksScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".CreateTaskScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HomeScreenActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginScreens.LoginActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".TaskScreens.ListTasksScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TaskScreens.CreateTaskScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreenActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

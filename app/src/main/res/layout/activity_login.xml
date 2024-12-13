@@ -3,51 +3,80 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".LoginActivity">
+    tools:context=".LoginScreens.LoginActivity"
+>
 
     <ImageView
         android:id="@+id/appIcon"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:contentDescription="@string/app_icon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/button_log_google"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fields"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/sortiticon"
         />
-
-    <Button
-        android:id="@+id/button_log_google"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="8dp"
-        app:cornerRadius="15dp"
-        android:backgroundTint="@color/purple"
-        android:text="@string/continuar_con_google"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button_log_correo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button_log_correo"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="65dp"
-        app:cornerRadius="15dp"
-        android:backgroundTint="@color/purple"
-        android:text="@string/continuar_con_correo"
-        android:textColor="@color/white"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fields"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/darkpurple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:elevation="2dp"
+    >
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="@id/button_log_google"
+            app:layout_constraintTop_toTopOf="@id/button_log_google"
+            app:layout_constraintBottom_toBottomOf="@id/button_log_google"
+            android:src="@drawable/googleicon"
+            android:elevation="2dp"
+            android:layout_marginStart="25dp"
+        />
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/button_log_google"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/purple"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Continuar con Google"
+            app:cornerRadius = "15dp"
+            android:textSize="20sp"
+        />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="@id/button_log_correo"
+            app:layout_constraintTop_toTopOf="@id/button_log_correo"
+            app:layout_constraintBottom_toBottomOf="@id/button_log_correo"
+            android:src="@drawable/emailicon"
+            android:elevation="2dp"
+            android:layout_marginStart="25dp"
+        />
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/button_log_correo"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/purplebar"
+            app:layout_constraintTop_toBottomOf="@+id/button_log_google"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Continuar con correo"
+            app:cornerRadius = "15dp"
+            android:textSize="20sp"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

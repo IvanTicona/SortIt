@@ -28,13 +28,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TaskScreens.ListTasksScreenActivity"
+            android:name=".TaskScreens.ListTasksActivity"
             android:exported="false" />
         <activity
-            android:name=".TaskScreens.CreateTaskScreenActivity"
+            android:name=".SettingScreens.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeScreenActivity"
+            android:name=".TaskScreens.CreateTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
             android:exported="false" />
     </application>
 

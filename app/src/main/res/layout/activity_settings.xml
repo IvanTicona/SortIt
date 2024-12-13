@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
-        android:text="Ajustes"
+        android:text="@string/ajustes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/title_bold_big"
@@ -62,13 +62,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/cuenta"
                 android:src="@drawable/usern"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Cuenta"
+                android:text="@string/cuentatext"
                 style="@style/title_bold"
                 />
         </LinearLayout>
@@ -84,13 +85,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="idiomaicon"
                 android:src="@drawable/languagen"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Idioma"
+                android:text="@string/idioma"
                 style="@style/title_bold"
                 />
         </LinearLayout>
@@ -105,15 +107,16 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/nightthemeicon"
                 android:src="@drawable/nightn"/>
 
             <TextView
                 style="@style/title_bold"
-                android:layout_width="242dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
-                android:text="Tema"
+                android:text="@string/modo_nocturno"
                 />
 
             <Switch
@@ -133,13 +136,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/notificon"
                 android:src="@drawable/notificationn"
                 android:layout_marginStart="30dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notificaciones"
+                android:text="@string/notificaciones"
                 android:layout_marginStart="16dp"
                 style="@style/title_bold"
                 />
@@ -154,13 +158,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/pructivityicon"
                 android:src="@drawable/productivityn"
                 android:layout_marginStart="30dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Productividad"
+                android:text="@string/productividad"
                 android:textColor="#FFFFFF"
                 android:layout_marginStart="16dp"
                 style="@style/title_bold"
@@ -176,13 +181,14 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/logouticon"
                 android:src="@drawable/logoutn"
                 android:layout_marginStart="30dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cerrar sesión"
+                android:text="@string/cerrar_sesi_n"
                 android:textColor="#FFFFFF"
                 android:layout_marginStart="16dp"
                 style="@style/title_bold"

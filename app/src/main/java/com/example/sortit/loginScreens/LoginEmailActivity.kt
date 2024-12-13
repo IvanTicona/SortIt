@@ -1,4 +1,4 @@
-package com.example.sortit.LoginScreens
+package com.example.sortit.loginScreens
 
 import android.content.Intent
 import android.os.Bundle
@@ -37,7 +37,7 @@ class LoginEmailActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         if (currentUser != null) {
             val intentHomeScreen = Intent(this, HomeActivity::class.java)
-//            startActivity(intentHomeScreen)
+            startActivity(intentHomeScreen)
         }
     }
 

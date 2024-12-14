@@ -13,17 +13,19 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
-            android:name=".LoginScreens.UserPlanActivity"
+            android:name=".loginScreens.UserPlanActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginScreens.LoginEmailActivity"
+            android:name=".loginScreens.LoginEmailActivity"
             android:exported="false" />
+
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginScreens.LoginActivity"
+            android:name=".loginScreens.LoginActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,13 +33,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TaskScreens.ListTasksActivity"
+            android:name=".taskScreens.ListTasksActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingScreens.SettingsActivity"
+            android:name=".settingScreens.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".TaskScreens.CreateTaskActivity"
+            android:name=".taskScreens.CreateTaskActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

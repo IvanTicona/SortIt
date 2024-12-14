@@ -12,18 +12,17 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
         android:text="@string/perfil"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/title_bold"
+        style="@style/title_bold_big"
         />
 
     <ImageView
         android:id="@+id/icon_buscar"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="56dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="65dp"
         android:contentDescription="@string/buscar_icon"
         android:src="@drawable/searchn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,9 +30,9 @@
 
     <ImageView
         android:id="@+id/icon_settings"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="29dp"
         android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsn"

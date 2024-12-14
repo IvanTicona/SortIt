@@ -1,13 +1,9 @@
-package com.example.sortit.LoginScreens
+package com.example.sortit.loginScreens
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.sortit.HomeScreenActivity
-import com.example.sortit.R
+import com.example.sortit.HomeActivity
 import com.example.sortit.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -38,8 +34,8 @@ class LoginActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if (currentUser != null) {
-            val intentHomeScreen = Intent(this, HomeScreenActivity::class.java)
-            // startActivity(intentHomeScreen)
+            val intentHomeScreen = Intent(this, HomeActivity::class.java)
+//             startActivity(intentHomeScreen)
         }
     }
 }

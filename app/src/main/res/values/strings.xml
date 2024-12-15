@@ -13,6 +13,7 @@
     <string name="proyecto_progra_iii">Proyecto Progra III</string>
     <string name="_07_12">07/12</string>
     <string name="tarea_sistemas">Tarea Sistemas</string>
+    <string name="editar_actividad"> Editar Actividad</string>
     <string name="_4">4</string>
     <string name="_09_12">09/12</string>
     <string name="tareas_pendientes">Tareas pendientes</string>
@@ -35,4 +36,13 @@
     <string name="productividad">Productividad</string>
     <string name="logouticon">logouticon</string>
     <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="todo_el_dia">Todo el día</string>
+    <string name="la_paz_bolivia">La Paz, Bolivia</string>
+    <string name="min_antes">10 min. antes</string>
+    <string name="no_repetir">No repetir</string>
+    <string name="repasar">Repasar</string>
+    <string name="archivo_adjunto">Archivo adjunto</string>
+    <string name="demasiado_importante">(7) Demasiado importante</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="guardar">Guardar</string>
 </resources>

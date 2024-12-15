@@ -25,9 +25,6 @@
             android:name=".taskScreens.EditTaskActivity"
             android:exported="false" />
         <activity
-            android:name=".taskScreens.EditActivity"
-            android:exported="false" />
-        <activity
             android:name=".UserPlanActivity"
             android:exported="false" />
 

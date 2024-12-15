@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
 //    id("com.google.devtools.ksp")
+    id("kotlin-kapt")
 }
 
 android {
@@ -52,6 +53,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
     implementation("com.google.firebase:firebase-auth")
+
+    val room_version = "2.5.2"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
 //    val room_version = "2.6.1"
 //    implementation("androidx.room:room-runtime:$room_version")
 //    ksp("androidx.room:room-compiler:$room_version")

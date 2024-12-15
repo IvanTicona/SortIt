@@ -1,11 +1,10 @@
 package com.example.sortit
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.sortit.databinding.ActivityHomeBinding
+import com.example.sortit.taskScreens.ListTasksActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -13,10 +12,13 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityHomeBinding.inflate(layoutInflater)
-
         val view = binding.root
         setContentView(view)
+
+        binding.showListBtn.setOnClickListener {
+            val intentShowList = Intent(this, ListTasksActivity::class.java)
+            startActivity(intentShowList)
+        }
     }
 }

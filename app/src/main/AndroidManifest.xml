@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
+            android:name=".items.TaskItem"
+            android:exported="false" />
+        <activity
             android:name=".taskScreens.EditTaskActivity"
             android:exported="false" />
         <activity

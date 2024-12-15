@@ -107,6 +107,7 @@
                             android:layout_height="match_parent"
                         >
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/createTaskBtn"
                                 android:layout_width="55dp"
                                 android:layout_height="55dp"
                                 app:cardCornerRadius="25dp"
@@ -149,6 +150,7 @@
                             android:layout_height="match_parent"
                             >
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/showListBtn"
                                 android:layout_width="55dp"
                                 android:layout_height="55dp"
                                 app:cardCornerRadius="25dp"

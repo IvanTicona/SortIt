@@ -7,7 +7,7 @@
     <string name="usuario1_gmail_com">usuario1@gmail.com</string>
     <string name="resumen_de_tareas">Resumen de tareas</string>
     <string name="_2">2</string>
-    <string name="tareas_completadas">Tareas completadas</string>
+    <string name="actividades_completadas">Actividades completadas</string>
     <string name="listar_actividades">Listar actividades</string>
     <string name="ver_m_s"><![CDATA[Ver más >]]></string>
     <string name="proyecto_progra_iii">Proyecto Progra III</string>
@@ -16,7 +16,7 @@
     <string name="editar_actividad"> Editar Actividad</string>
     <string name="_4">4</string>
     <string name="_09_12">09/12</string>
-    <string name="tareas_pendientes">Tareas pendientes</string>
+    <string name="actividades_pendientes">Actividades pendientes</string>
     <string name="app_icon">app icon</string>
     <string name="home_icon">home icon</string>
     <string name="calendar_icon">calendar icon</string>

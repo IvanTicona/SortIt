@@ -35,4 +35,12 @@
     <string name="productividad">Productividad</string>
     <string name="logouticon">logouticon</string>
     <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="felicidades_ya_diste_el_primer_paso_para_tener_una_vida_m_s_organizada">¡Felicidades! Ya diste el primer paso para tener una vida más organizada</string>
+    <string name="subir_foto">Subir foto</string>
+    <string name="tu_perfil">Tu perfil</string>
+    <string name="abrir_sortit">Abrir SortIt</string>
+    <string name="ingresa_tu_nombre">Ingresa tu nombre</string>
+    <string name="crea_tu_perfil">Crea tu perfil</string>
+    <string name="foto_de_perfil">Foto de perfil</string>
+    <string name="icon_cameran">icon_cameran</string>
 </resources>

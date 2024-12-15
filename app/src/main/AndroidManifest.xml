@@ -13,19 +13,23 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserPlanActivity"
             android:exported="false" />
         <activity
             android:name=".loginScreens.LoginEmailActivity"
             android:exported="false" />
-
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".loginScreens.LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

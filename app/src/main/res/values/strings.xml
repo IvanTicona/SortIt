@@ -43,4 +43,9 @@
     <string name="crea_tu_perfil">Crea tu perfil</string>
     <string name="foto_de_perfil">Foto de perfil</string>
     <string name="icon_cameran">icon_cameran</string>
+    <string name="buscar_actividad">Buscar actividad</string>
+    <string name="proyecto_1">Proyecto 1</string>
+    <string name="_8_00_9_00_am">8:00 - 9:00 am</string>
+    <string name="recenticon">recenticon</string>
+    <string name="idiomaicon">idiomaicon</string>
 </resources>

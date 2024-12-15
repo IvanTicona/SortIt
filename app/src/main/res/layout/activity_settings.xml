@@ -86,7 +86,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:contentDescription="idiomaicon"
+                android:contentDescription="@string/idiomaicon"
                 android:src="@drawable/languagen"/>
 
             <TextView

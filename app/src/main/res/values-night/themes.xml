@@ -32,6 +32,17 @@
         <item name="android:textColor">@color/gray</item>
         <item name="fontFamily">@font/psregular</item>
     </style>
+    <style name="text_semibold_gray">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="fontFamily">@font/pssemibold</item>
+    </style>
+
+    <style name="text_small_gray">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="fontFamily">@font/psregular</item>
+    </style>
 
     <style name="text_normal_white">
         <item name="android:textSize">18sp</item>

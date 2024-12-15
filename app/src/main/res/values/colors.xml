@@ -9,5 +9,6 @@
     <color name="darkpurple">#141420</color>
     <color name="gray">#A5A5A5</color>
     <color name="purplebar">#271F5C</color>
+    <color name="darkgray">#47464c</color>
     <color name="transparent">#00000000</color>
 </resources>

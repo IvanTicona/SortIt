@@ -84,14 +84,14 @@
 
     <TextView
         android:id="@+id/resumen_tareas"
+        style="@style/title_bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:text="@string/resumen_de_tareas"
+        android:text="@string/resumen_de_actividades"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_profile"
-        style="@style/title_bold"/>
+        app:layout_constraintTop_toBottomOf="@id/card_profile" />
 
     <LinearLayout
         android:id="@+id/tareas"

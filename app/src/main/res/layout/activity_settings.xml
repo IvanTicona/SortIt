@@ -16,6 +16,8 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
         android:text="@string/ajustes"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/title_bold_big"
@@ -71,6 +73,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/cuentatext"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 style="@style/title_bold"
                 />
         </LinearLayout>
@@ -94,6 +98,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/idioma"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 style="@style/title_bold"
                 />
         </LinearLayout>
@@ -118,7 +124,8 @@
                 android:layout_marginStart="16dp"
                 android:layout_weight="1"
                 android:text="@string/modo_nocturno"
-                />
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"/>
 
             <Switch
                 android:id="@+id/themeSwitch"
@@ -145,6 +152,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/notificaciones"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 android:layout_marginStart="16dp"
                 style="@style/title_bold"
                 />
@@ -168,9 +177,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/productividad"
                 android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 android:layout_marginStart="16dp"
-                style="@style/title_bold"
-                />
+                style="@style/title_bold"/>
         </LinearLayout>
 
         <LinearLayout
@@ -191,6 +200,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/cerrar_sesi_n"
                 android:textColor="#FFFFFF"
+                android:textSize="20dp"
                 android:layout_marginStart="16dp"
                 style="@style/title_bold"
                 />

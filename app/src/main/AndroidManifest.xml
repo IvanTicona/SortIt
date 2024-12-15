@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,18 +16,23 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
+            android:name=".taskScreens.EditTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".taskScreens.EditActivity"
+            android:exported="false" />
+        <activity
             android:name=".UserPlanActivity"
             android:exported="false" />
-
         <activity
             android:name=".loginScreens.LoginEmailActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".loginScreens.LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +42,6 @@
         <activity
             android:name=".taskScreens.ListTasksActivity"
             android:exported="false" />
-
         <activity
             android:name=".settingScreens.SettingsActivity"
             android:exported="false" />

@@ -24,41 +24,41 @@ class CreateTaskActivity : AppCompatActivity() {
         db = DatabaseProvider.getDatabase(this)
 
         binding.btnCreateTask.setOnClickListener {
-            createTask()
+//            createTask()
         }
     }
-    fun createTask(){
-        val title = binding.createName.text.toString().trim()
-        val description = binding.createDescription.text.toString().trim()
-        val dateString = binding.createDate.text.toString().trim()
-
-        if (title.isEmpty()) {
-            binding.createName.error = "Ingresa un título"
-            return
-        }
-
-        if (description.isEmpty()) {
-            binding.createDescription.error = "Ingresa una descripción"
-            return
-        }
-
-        val dateLong = if (dateString.isEmpty()) {
-            System.currentTimeMillis()
-        } else {
-            dateString.toLongOrNull() ?: System.currentTimeMillis()
-        }
-
-        val newTask = Task(
-            nombre = title,
-            descripcion = description,
-            fecha = dateLong
-        )
-
-        CoroutineScope(Dispatchers.IO).launch {
-            db.taskDao().createTask(newTask)
-            runOnUiThread {
-                finish()
-            }
-        }
-    }
+//    fun createTask(){
+//        val title = binding.createName.text.toString().trim()
+//        val description = binding.createDescription.text.toString().trim()
+//        val dateString = binding.createDate.text.toString().trim()
+//
+//        if (title.isEmpty()) {
+//            binding.createName.error = "Ingresa un título"
+//            return
+//        }
+//
+//        if (description.isEmpty()) {
+//            binding.createDescription.error = "Ingresa una descripción"
+//            return
+//        }
+//
+//        val dateLong = if (dateString.isEmpty()) {
+//            System.currentTimeMillis()
+//        } else {
+//            dateString.toLongOrNull() ?: System.currentTimeMillis()
+//        }
+//
+//        val newTask = Task(
+//            nombre = title,
+//            descripcion = description,
+//            fecha = dateLong
+//        )
+//
+//        CoroutineScope(Dispatchers.IO).launch {
+//            db.taskDao().createTask(newTask)
+//            runOnUiThread {
+//                finish()
+//            }
+//        }
+//    }
 }

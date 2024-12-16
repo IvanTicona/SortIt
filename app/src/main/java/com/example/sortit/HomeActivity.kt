@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.databinding.ActivityHomeBinding
+import com.example.sortit.taskScreens.CreateTaskActivity
 import com.example.sortit.taskScreens.ListTasksActivity
 
 class HomeActivity : AppCompatActivity() {
@@ -19,6 +20,10 @@ class HomeActivity : AppCompatActivity() {
         binding.showListBtn.setOnClickListener {
             val intentShowList = Intent(this, ListTasksActivity::class.java)
             startActivity(intentShowList)
+        }
+        binding.createTaskBtn.setOnClickListener {
+            val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
+            startActivity(intentCreateTask)
         }
     }
 }

@@ -4,11 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
 import com.example.sortit.adapters.TaskAdapter
 import com.example.sortit.dataClasses.Task
 import com.example.sortit.databinding.ActivityListTasksBinding
 import com.example.sortit.room.AppDatabase
+import com.example.sortit.room.DatabaseProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,12 +27,8 @@ class ListTasksActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        // Crear instancia de DB
-        db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java,
-            "app_database"
-        ).build()
+        //Instanciar DB
+        db = DatabaseProvider.getDatabase(this)
 
         // Inicializar el RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)

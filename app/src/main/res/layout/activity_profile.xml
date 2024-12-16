@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/perfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="27dp"
         android:text="@string/perfil"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,8 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_margin="25dp"
-        app:cardBackgroundColor="@color/darkpurple"
-        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/card_background"        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/perfil">
@@ -108,8 +107,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/darkpurple"
-            app:cardCornerRadius="8dp">
+            app:cardBackgroundColor="@color/card_background"            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,8 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/darkpurple"
-            app:cardCornerRadius="8dp">
+            app:cardBackgroundColor="@color/card_background"            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -207,8 +204,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/darkpurple"
-            app:cardCornerRadius="8dp">
+            app:cardBackgroundColor="@color/card_background"            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -232,8 +228,7 @@
                     android:layout_margin="13dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/_07_12"
-                    android:textColor="@color/gray"
-                    android:textSize="15sp" />
+                    style="@style/text_normal_white"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -242,8 +237,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
-            app:cardBackgroundColor="@color/darkpurple"
-            app:cardCornerRadius="8dp">
+            app:cardBackgroundColor="@color/card_background"            app:cardCornerRadius="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -267,8 +261,7 @@
                     android:layout_margin="13dp"
                     android:layout_marginTop="4dp"
                     android:text="@string/_09_12"
-                    android:textColor="@color/gray"
-                    android:textSize="12sp" />
+                    style="@style/text_normal_white"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
@@ -288,6 +281,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/home_button"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"
@@ -295,6 +289,7 @@
                 android:src="@drawable/homen" />
 
             <ImageView
+                android:id="@+id/calendar_button"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"
@@ -302,6 +297,7 @@
                 android:src="@drawable/calendarn" />
 
             <ImageView
+                android:id="@+id/profile_button"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_margin="43dp"

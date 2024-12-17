@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priority_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string name="app_name">SortIt</string>
+    <string name="continuar_con_google">Continuer avec Google</string>
+    <string name="continuar_con_correo">Continuer avec e-mail</string>
+    <string name="perfil">Profil</string>
+    <string name="usuario_1">Utilisateur 1</string>
+    <string name="usuario1_gmail_com">utilisateur1@gmail.com</string>
+    <string name="resumen_de_actividades">Résumé des activités</string>
+    <string name="_2">2</string>
+    <string name="actividades_completadas">Activités terminées</string>
+    <string name="listar_actividades">Lister les activités</string>
+    <string name="ver_m_s"><![CDATA[Voir plus >]]></string>
+    <string name="proyecto_progra_iii">Projet Progra III</string>
+    <string name="_07_12">07/12</string>
+    <string name="tarea_sistemas">Tâche Systèmes</string>
+    <string name="editar_actividad">Modifier l\'activité</string>
+    <string name="_4">4</string>
+    <string name="_09_12">09/12</string>
+    <string name="actividades_pendientes">Activités en attente</string>
+    <string name="app_icon">icône de l\'application</string>
+    <string name="home_icon">icône d\'accueil</string>
+    <string name="calendar_icon">icône du calendrier</string>
+    <string name="person_icon">icône de profil</string>
+    <string name="settings_icon">icône des paramètres</string>
+    <string name="buscar_icon">icône de recherche</string>
+    <string name="pfp_icon">icône de photo de profil</string>
+    <string name="ajustes">Paramètres</string>
+    <string name="cuenta">Compte</string>
+    <string name="cuentatext">Compte</string>
+    <string name="idioma">Langue</string>
+    <string name="nightthemeicon">icône du thème nocturne</string>
+    <string name="modo_nocturno">Mode nuit</string>
+    <string name="notificaciones">Notifications</string>
+    <string name="notificon">icône de notification</string>
+    <string name="pructivityicon">icône de productivité</string>
+    <string name="productividad">Productivité</string>
+    <string name="logouticon">icône de déconnexion</string>
+    <string name="cerrar_sesi_n">Déconnexion</string>
+    <string name="felicidades_ya_diste_el_primer_paso_para_tener_una_vida_m_s_organizada">Félicitations ! Vous avez franchi la première étape vers une vie plus organisée</string>
+    <string name="subir_foto">Télécharger une photo</string>
+    <string name="tu_perfil">Votre profil</string>
+    <string name="abrir_sortit">Ouvrir SortIt</string>
+    <string name="ingresa_tu_nombre">Entrez votre nom</string>
+    <string name="crea_tu_perfil">Créez votre profil</string>
+    <string name="foto_de_perfil">Photo de profil</string>
+    <string name="icon_cameran">icône d\'appareil photo</string>
+    <string name="buscar_actividad">Rechercher une activité</string>
+    <string name="proyecto_1">Projet 1</string>
+    <string name="_8_00_9_00_am">8:00 - 9:00 am</string>
+    <string name="recenticon">icône récente</string>
+    <string name="idiomaicon">icône de langue</string>
+    <string name="todo_el_dia">Toute la journée</string>
+    <string name="la_paz_bolivia">La Paz, Bolivie</string>
+    <string name="min_antes">10 min. avant</string>
+    <string name="no_repetir">Ne pas répéter</string>
+    <string name="repasar">Réviser</string>
+    <string name="archivo_adjunto">Fichier joint</string>
+    <string name="demasiado_importante">(7) Trop important</string>
+    <string name="cancelar">Annuler</string>
+    <string name="guardar">Enregistrer</string>
+    <string name="continuar">Continuer</string>
+    <string name="ubi">Localisation</string>
+    <string name="casa">Maison</string>
+    <string name="empieza">Commence</string>
+    <string name="lunes">"Lun., Déc. 16 15:00"</string>
+    <string name="lunes_fin">Lun., Déc. 16 16:30</string>
+    <string name="notas">Notes</string>
+    <string name="termina">Se termine</string>
+    <string name="correo">E-mail</string>
+    <string name="prioridad">Priorité</string>
+    <string name="titulo">Titre</string>
+    <string name="ubicacion">Localisation</string>
+</resources>

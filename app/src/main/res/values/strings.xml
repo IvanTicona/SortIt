@@ -1,4 +1,13 @@
 <resources>
+    <string-array name="priority_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
     <string name="app_name">SortIt</string>
     <string name="continuar_con_google">Continuar con Google</string>
     <string name="continuar_con_correo">Continuar con correo</string>

@@ -133,6 +133,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/dividerDateStart"
                     android:layout_width="70dp"
                     android:layout_height="50dp"
+                    android:textColor="@color/white"
                     tools:ignore="UseSwitchCompatOrMaterialXml"
                 />
                 <com.google.android.material.divider.MaterialDivider
@@ -151,12 +152,55 @@
                     app:layout_constraintBottom_toBottomOf="@+id/dividerDateEnd"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:text="Empieza"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
                 />
+                <androidx.cardview.widget.CardView
+                    app:layout_constraintTop_toBottomOf="@id/dividerDateStart"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividerDateEnd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/purplebar"
+                >
+                    <TextView
+                        android:id="@+id/dateStartPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="01/01/2000"
+                        android:textColorHint="@color/darkgray"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/psregular"
+                        android:textAlignment="center"
+                    />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:layout_constraintTop_toBottomOf="@id/dividerDateStart"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividerDateEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/purplebar"
+                    >
+                    <TextView
+                        android:id="@+id/hourStartPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="00:00"
+                        android:textColorHint="@color/darkgray"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/psregular"
+                        android:textAlignment="center"
+                        />
+                </androidx.cardview.widget.CardView>
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerDateEnd"
                     app:layout_constraintTop_toBottomOf="@+id/dateStart"
@@ -173,12 +217,58 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:text="Termina"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
                     />
+                <androidx.cardview.widget.CardView
+                    app:layout_constraintTop_toBottomOf="@+id/dividerDateEnd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/purplebar"
+                    android:layout_marginTop="10dp"
+                >
+                    <TextView
+                        android:id="@+id/dateEndPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="01/01/2000"
+                        android:textColorHint="@color/darkgray"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/psregular"
+                        android:textAlignment="center"
+                        />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:layout_constraintTop_toBottomOf="@id/dividerDateEnd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:cardCornerRadius="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/purplebar"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:id="@+id/hourEndPicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="00:00"
+                        android:textColorHint="@color/darkgray"
+                        android:textSize="17sp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/psregular"
+                        android:textAlignment="center"
+                        />
+                </androidx.cardview.widget.CardView>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
@@ -198,6 +288,7 @@
                 android:paddingVertical="10dp"
                 >
                 <TextView
+                    android:id="@+id/labelPriority"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@+id/definePriority"
                     app:layout_constraintBottom_toBottomOf="@+id/definePriority"
@@ -259,7 +350,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
                     android:id="@+id/bindNotes"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="70dp"
                     android:textSize="17sp"
                     android:hint="Notas"
                     android:textColor="@color/white"

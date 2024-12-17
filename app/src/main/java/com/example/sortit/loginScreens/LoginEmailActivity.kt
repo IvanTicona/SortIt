@@ -66,7 +66,7 @@ class LoginEmailActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     println("signInWithEmail:success")
                     val intentHomeScreen = Intent(this, HomeActivity::class.java)
-//                    startActivity(intentHomeScreen)
+                    startActivity(intentHomeScreen)
                 } else {
                     println("signInWithEmail:failure")
                     println(task.exception)

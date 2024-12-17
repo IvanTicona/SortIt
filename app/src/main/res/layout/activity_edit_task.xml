@@ -11,10 +11,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,30 +26,30 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/arrowleft"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/headerScreen"
+                style="@style/title_bold_big"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/editar_actividad"
+                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                style="@style/title_bold_big"
-                android:textAlignment="center"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp">
+            app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -57,50 +57,50 @@
                 android:layout_marginHorizontal="15dp">
 
                 <EditText
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@+id/dividertitle"
                     android:id="@+id/createName"
+                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textSize="17sp"
+                    android:backgroundTint="@color/darkpurple"
                     android:hint="@string/titulo"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividertitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividertitle"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    app:dividerColor="@color/darkgray"/>
+                    app:dividerColor="@color/darkgray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividertitle"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     android:id="@+id/createUbication"
+                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textSize="17sp"
+                    android:backgroundTint="@color/darkpurple"
                     android:hint="@string/ubicacion"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividertitle" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp">
+            app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -110,77 +110,77 @@
 
                 <TextView
                     android:id="@+id/labelSwitch"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/allDaySwitch"
-                    app:layout_constraintBottom_toBottomOf="@+id/allDaySwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/psregular"
                     android:text="@string/todo_el_dia"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/allDaySwitch"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/allDaySwitch" />
 
                 <Switch
                     android:id="@+id/allDaySwitch"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/dividerDateStart"
                     android:layout_width="70dp"
                     android:layout_height="50dp"
-                    tools:ignore="UseSwitchCompatOrMaterialXml"/>
+                    app:layout_constraintBottom_toTopOf="@+id/dividerDateStart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerDateStart"
-                    app:layout_constraintTop_toBottomOf="@+id/allDaySwitch"
-                    app:layout_constraintBottom_toTopOf="@+id/dateStart"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
                     app:dividerColor="@color/darkgray"
-                    android:layout_marginVertical="10dp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/dateStart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/allDaySwitch" />
 
                 <TextView
                     android:id="@+id/dateStart"
-                    app:layout_constraintTop_toBottomOf="@id/dividerDateStart"
-                    app:layout_constraintBottom_toBottomOf="@+id/dividerDateEnd"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/psregular"
                     android:text="@string/empieza"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividerDateEnd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dividerDateStart" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerDateEnd"
-                    app:layout_constraintTop_toBottomOf="@+id/dateStart"
-                    app:layout_constraintBottom_toTopOf="@+id/dateEnd"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
                     app:dividerColor="@color/darkgray"
-                    android:layout_marginVertical="10dp"/>
+                    app:layout_constraintBottom_toTopOf="@+id/dateEnd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dateStart" />
 
                 <TextView
                     android:id="@+id/dateEnd"
-                    app:layout_constraintTop_toBottomOf="@id/dividerDateEnd"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/psregular"
                     android:text="@string/termina"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dividerDateEnd" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp">
+            app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -189,31 +189,31 @@
                 android:paddingVertical="10dp">
 
                 <TextView
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/definePriority"
-                    app:layout_constraintBottom_toBottomOf="@+id/definePriority"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/psregular"
                     android:text="@string/prioridad"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/definePriority"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/definePriority" />
 
                 <Spinner
                     android:id="@+id/definePriority"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="100dp"
-                    android:layout_height="50dp"/>
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp">
+            app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -221,40 +221,40 @@
                 android:layout_marginHorizontal="15dp">
 
                 <EditText
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
                     android:id="@+id/bindEmail"
+                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:backgroundTint="@color/darkpurple"
                     android:hint="@string/correo"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerNotes"
-                    app:layout_constraintTop_toBottomOf="@+id/bindEmail"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    app:dividerColor="@color/darkgray"/>
+                    app:dividerColor="@color/darkgray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bindEmail" />
 
                 <EditText
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
                     android:id="@+id/bindNotes"
+                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:textSize="17sp"
+                    android:backgroundTint="@color/darkpurple"
+                    android:gravity="top"
                     android:hint="@string/notas"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"
-                    android:gravity="top"/>
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -271,33 +271,33 @@
                 <Button
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:backgroundTint="@color/purplebar"
                     android:text="@string/cancelar"
                     android:textSize="20sp"
-                    android:backgroundTint="@color/purplebar"
-                    app:cornerRadius="15dp"/>
+                    app:cornerRadius="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.divider.MaterialDivider
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="1dp"
                     android:layout_height="50dp"
                     android:orientation="vertical"
-                    app:dividerColor="@color/darkgray"/>
+                    app:dividerColor="@color/darkgray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnCreateTask"
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:backgroundTint="@color/purplebar"
                     android:text="@string/guardar"
                     android:textSize="20sp"
-                    android:backgroundTint="@color/purplebar"
-                    app:cornerRadius="15dp"/>
+                    app:cornerRadius="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

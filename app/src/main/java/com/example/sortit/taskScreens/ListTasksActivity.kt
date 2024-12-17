@@ -30,7 +30,11 @@ class ListTasksActivity : AppCompatActivity() {
         db = DatabaseProvider.getDatabase(this)
         // Inicializar el RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        taskAdapter = TaskAdapter(emptyList())
+        taskAdapter = TaskAdapter(emptyList(),
+                onDelete = { task ->
+                    deleteTask(task)
+                }
+            )
         recyclerView.adapter = taskAdapter
         // Cargar DB
         loadTasksFromDatabase()
@@ -60,7 +64,17 @@ class ListTasksActivity : AppCompatActivity() {
             // Volver a actualizar la lista
             val updatedTasks = db.taskDao().getAllTasks()
             runOnUiThread {
-                taskAdapter = TaskAdapter(updatedTasks)
+                taskAdapter = TaskAdapter(updatedTasks, onDelete = { deleteTask(it) })
+                binding.recyclerViewTasks.adapter = taskAdapter
+            }
+        }
+    }
+    private fun deleteTask(task: Task){
+        CoroutineScope(Dispatchers.IO).launch {
+            db.taskDao().deleteTask(task)
+            val updatedTasks = db.taskDao().getAllTasks()
+            runOnUiThread {
+                taskAdapter = TaskAdapter(updatedTasks, onDelete = { deleteTask(it) })
                 binding.recyclerViewTasks.adapter = taskAdapter
             }
         }

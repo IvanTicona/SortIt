@@ -11,12 +11,17 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class TaskAdapter(private val taskList: List<Task>): RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+class TaskAdapter(
+    private val taskList: List<Task>,
+    private val onDelete: (Task) -> Unit,
+//    private val onUpdate: (Task) -> Unit
+): RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+
     // Esta clase representa cada item
     inner class TaskViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val textViewTitle: TextView = itemView.findViewById(R.id.textViewTaskTitle)
-        val textViewDescription: TextView = itemView.findViewById(R.id.textViewTaskDescription)
         val textViewDate: TextView = itemView.findViewById(R.id.textViewTaskDate)
+        val btnDelete: View = itemView.findViewById(R.id.deleteBtn)
     }
     // Crear la vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
@@ -27,7 +32,6 @@ class TaskAdapter(private val taskList: List<Task>): RecyclerView.Adapter<TaskAd
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
         val task = taskList[position]
         holder.textViewTitle.text = task.nombre
-        holder.textViewDescription.text = task.notas
 
         // Formatear la fecha
         val date = Date(task.fechaEmpieza) // task.date es Long, Date lo convierte a objeto fecha
@@ -40,6 +44,14 @@ class TaskAdapter(private val taskList: List<Task>): RecyclerView.Adapter<TaskAd
 //        val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
 //        val timeString = timeFormat.format(time)
 //        holder.textViewTime.text = timeString
+
+        // Listeners
+        holder.btnDelete.setOnClickListener {
+            onDelete(task)
+        }
+//        holder.btnUpdate.setOnClickListener {
+//            onUpdate(task)
+//        }
     }
     // Retornar cantidad de item en la lista
     override fun getItemCount(): Int {

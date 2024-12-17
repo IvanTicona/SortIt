@@ -1,14 +1,19 @@
 package com.example.sortit.settingScreens
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.content.res.Configuration
+import android.content.res.Resources
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import com.example.sortit.CreateProfileActivity
 import com.example.sortit.HomeActivity
 import com.example.sortit.ProfileActivity
 import com.example.sortit.SearchActivity
 import com.example.sortit.databinding.ActivitySettingsBinding
+import java.util.Locale
 
 class SettingsActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingsBinding
@@ -26,19 +31,51 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        binding.iconBuscar.setOnClickListener(){
+        binding.iconBuscar.setOnClickListener() {
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
-
         }
-        binding.homeButton.setOnClickListener(){
+        binding.homeButton.setOnClickListener() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
-        binding.profileButton.setOnClickListener(){
+        binding.profileButton.setOnClickListener() {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
+
+        val languages = listOf("Español", "Francés", "Inglés") // Lista de idiomas disponibles
+        val languageAdapter = ArrayAdapter(this, R.layout.simple_spinner_item, languages)
+        languageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.languageSpinner.adapter = languageAdapter
+
+        binding.languageSpinner.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parentView: AdapterView<*>?,
+                    view: android.view.View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    when (position) {
+                        0 -> setAppLocale("es")
+                        1 -> setAppLocale("fr")
+                        2 -> setAppLocale("en")
+                    }
+                }
+
+                override fun onNothingSelected(parentView: AdapterView<*>?) {
+                }
+            }
+    }
+
+    private fun setAppLocale(language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+
+        binding.root.requestLayout()
     }
 }
-

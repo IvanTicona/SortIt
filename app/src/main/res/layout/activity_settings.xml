@@ -87,14 +87,31 @@
                 android:contentDescription="@string/idiomaicon"
                 android:src="@drawable/languagen"/>
 
+
             <TextView
+                style="@style/text_semibold_white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="@string/idioma"
-                style="@style/text_semibold_white"
-                />
+                android:text="@string/idioma" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Spinner
+                    android:id="@+id/languageSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -120,7 +137,6 @@
                 android:id="@+id/themeSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="15dp"
                 tools:ignore="UseSwitchCompatOrMaterialXml"/>
         </LinearLayout>
 

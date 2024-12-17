@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.HomeActivity
+import com.example.sortit.SearchActivity
 import com.example.sortit.databinding.ActivityLoginEmailBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -29,7 +30,10 @@ class LoginEmailActivity : AppCompatActivity() {
             signIn(email, password)
 //            createAccount(email, password)
         }
+
     }
+
+
 
     override fun onStart() {
         super.onStart()

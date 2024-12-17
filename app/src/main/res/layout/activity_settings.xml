@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".settingScreens.SettingsActivity">
+    tools:context=".settingScreens.SettingsActivity"
+    >
 
     <TextView
         android:id="@+id/ajustes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginStart="20dp"
         android:text="@string/ajustes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,23 +24,23 @@
         android:id="@+id/icon_buscar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="65dp"
         android:contentDescription="@string/buscar_icon"
         android:src="@drawable/searchn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="10dp"/>
 
     <ImageView
         android:id="@+id/icon_settings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginEnd="30dp"
         android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="10dp"/>
 
     <LinearLayout
         android:id="@+id/menuOptions"
@@ -48,6 +48,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="20dp"
+
         app:layout_constraintTop_toBottomOf="@id/ajustes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -56,12 +58,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_marginStart="30dp">
+            android:layout_marginVertical="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/cuenta"
                 android:src="@drawable/usern"/>
 
@@ -70,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/cuentatext"
-                style="@style/title_bold"
+                style="@style/text_semibold_white"
                 />
         </LinearLayout>
 
@@ -78,13 +79,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_marginStart="30dp">
-
+            android:layout_marginVertical="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/idiomaicon"
                 android:src="@drawable/languagen"/>
 
@@ -93,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="@string/idioma"
-                style="@style/title_bold"
+                style="@style/text_semibold_white"
                 />
         </LinearLayout>
 
@@ -101,17 +100,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp"
-            android:layout_marginStart="30dp">
+            android:layout_marginVertical="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/nightthemeicon"
                 android:src="@drawable/nightn"/>
 
             <TextView
-                style="@style/title_bold"
+                style="@style/text_semibold_white"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -130,21 +128,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_marginVertical="10dp">
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/notificon"
                 android:src="@drawable/notificationn"
-                android:layout_marginStart="30dp"/>
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/notificaciones"
                 android:layout_marginStart="16dp"
-                style="@style/title_bold"
+                style="@style/text_semibold_white"
                 />
         </LinearLayout>
 
@@ -152,42 +150,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_marginVertical="10dp">
+
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/pructivityicon"
-                android:src="@drawable/productivityn"
-                android:layout_marginStart="30dp"/>
+                android:src="@drawable/productivityn" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/productividad"
                 android:layout_marginStart="16dp"
-                style="@style/title_bold"/>
+                style="@style/text_semibold_white"
+/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:layout_marginVertical="10dp">
+
 
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:contentDescription="@string/logouticon"
-                android:src="@drawable/logoutn"
-                android:layout_marginStart="30dp"/>
+                android:src="@drawable/logoutn"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cerrar_sesi_n"
                 android:layout_marginStart="16dp"
-                style="@style/title_bold"
+                style="@style/text_semibold_white"
                 />
         </LinearLayout>
     </LinearLayout>

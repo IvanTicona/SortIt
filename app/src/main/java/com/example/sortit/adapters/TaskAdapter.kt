@@ -27,7 +27,7 @@ class TaskAdapter(private val taskList: List<Task>): RecyclerView.Adapter<TaskAd
         holder.textViewDescription.text = task.descripcion
         // Supongamos que conviertes el timestamp en fecha legible
         // Esto es sólo un ejemplo, en la práctica necesitarás formatear el timestamp.
-        holder.textViewDate.text = "Fecha: ${task.fecha}"
+//        holder.textViewDate.text = "Fecha: ${task.fecha}"
     }
     // Retornar cantidad de item en la lista
     override fun getItemCount(): Int {

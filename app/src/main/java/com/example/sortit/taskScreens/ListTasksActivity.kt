@@ -26,10 +26,8 @@ class ListTasksActivity : AppCompatActivity() {
         recyclerView = binding.recyclerViewTasks
         val view = binding.root
         setContentView(view)
-
         //Instanciar DB
         db = DatabaseProvider.getDatabase(this)
-
         // Inicializar el RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
         taskAdapter = TaskAdapter(emptyList())
@@ -46,8 +44,16 @@ class ListTasksActivity : AppCompatActivity() {
                 // Prueba para datos
                 val newTask = Task(
                     nombre = "Estudiar Room",
-                    descripcion = "Repasar la implementación de Room en Android",
-                    fecha = System.currentTimeMillis()
+                    notas = "Repasar la implementación de Room en Android",
+                    fechaEmpieza = System.currentTimeMillis(),
+                    fechaTermina = System.currentTimeMillis(),
+                    horaEmpieza = System.currentTimeMillis(),
+                    horaTermina = System.currentTimeMillis(),
+                    prioridad = 1,
+                    todoElDia = false,
+                    completado = false,
+                    ubicacion = "Ubicacion falsa",
+                    correo = "correo@gmail.com"
                 )
                 db.taskDao().createTask(newTask)
             }

@@ -9,6 +9,7 @@ import com.example.sortit.dataClasses.Task
 import com.example.sortit.databinding.ActivityListTasksBinding
 import com.example.sortit.room.AppDatabase
 import com.example.sortit.room.DatabaseProvider
+import com.example.sortit.utils.navigateToScreen
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,45 +27,35 @@ class ListTasksActivity : AppCompatActivity() {
         recyclerView = binding.recyclerViewTasks
         val view = binding.root
         setContentView(view)
-        //Instanciar DB
+
+        // DB
         db = DatabaseProvider.getDatabase(this)
+
         // Inicializar el RecyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
         taskAdapter = TaskAdapter(emptyList(),
-                onDelete = { task ->
-                    deleteTask(task)
-                }
+                onDelete = { deleteTask(it) },
+                onTaskClick =  {}
             )
         recyclerView.adapter = taskAdapter
+
         // Cargar DB
+        loadTasksFromDatabase()
+    }
+    override fun onResume() {
+        super.onResume()
         loadTasksFromDatabase()
     }
     private fun loadTasksFromDatabase() {
         CoroutineScope(Dispatchers.IO).launch {
             // Cargamos la lista
             val tasks = db.taskDao().getAllTasks()
-            // Si esta vacia
-            if (tasks.isEmpty()) {
-                // Prueba para datos
-                val newTask = Task(
-                    nombre = "Estudiar Room",
-                    notas = "Repasar la implementación de Room en Android",
-                    fechaEmpieza = System.currentTimeMillis(),
-                    fechaTermina = System.currentTimeMillis(),
-                    horaEmpieza = System.currentTimeMillis(),
-                    horaTermina = System.currentTimeMillis(),
-                    prioridad = 1,
-                    todoElDia = false,
-                    completado = false,
-                    ubicacion = "Ubicacion falsa",
-                    correo = "correo@gmail.com"
-                )
-                db.taskDao().createTask(newTask)
-            }
-            // Volver a actualizar la lista
-            val updatedTasks = db.taskDao().getAllTasks()
             runOnUiThread {
-                taskAdapter = TaskAdapter(updatedTasks, onDelete = { deleteTask(it) })
+                taskAdapter = TaskAdapter(
+                    tasks,
+                    onDelete = { deleteTask(it) },
+                    onTaskClick = { navigateToScreen(this@ListTasksActivity, EditTaskActivity::class.java, "TASK_ID", it.id) }
+                )
                 binding.recyclerViewTasks.adapter = taskAdapter
             }
         }
@@ -74,7 +65,7 @@ class ListTasksActivity : AppCompatActivity() {
             db.taskDao().deleteTask(task)
             val updatedTasks = db.taskDao().getAllTasks()
             runOnUiThread {
-                taskAdapter = TaskAdapter(updatedTasks, onDelete = { deleteTask(it) })
+                taskAdapter = TaskAdapter(updatedTasks, onDelete = { deleteTask(it) }, onTaskClick = {})
                 binding.recyclerViewTasks.adapter = taskAdapter
             }
         }

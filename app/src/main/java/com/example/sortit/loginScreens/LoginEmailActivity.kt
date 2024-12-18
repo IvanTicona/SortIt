@@ -45,23 +45,23 @@ class LoginEmailActivity : AppCompatActivity() {
         }
     }
 
-    // Funcion para pantalla Crear Cuenta
-//    fun createAccount(email: String, password: String){
-//        auth.createUserWithEmailAndPassword(email, password)
-//            .addOnCompleteListener(this) { task ->
-//                if (task.isSuccessful) {
-//                    // Sign in success, update UI with the signed-in user's information
-//                    println("createUserWithEmail:success")
-//                    val user = auth.currentUser
-//                    // updateUI(user)
-//                } else {
-//                    // If sign in fails, display a message to the user.
-//                    println("createUserWithEmail:failure")
-//                    println(task.exception)
-//                    // updateUI(null)
-//                }
-//            }
-//    }
+//     Funcion para pantalla Crear Cuenta
+    fun createAccount(email: String, password: String){
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    println("createUserWithEmail:success")
+                    val user = auth.currentUser
+                    // updateUI(user)
+                } else {
+                    // If sign in fails, display a message to the user.
+                    println("createUserWithEmail:failure")
+                    println(task.exception)
+                    // updateUI(null)
+                }
+            }
+    }
 
     fun signIn(email: String, password: String){
         // Validaciones

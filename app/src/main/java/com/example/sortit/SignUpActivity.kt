@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.databinding.ActivitySignUpBinding
+import com.example.sortit.loginScreens.LoginEmailActivity
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -38,7 +39,9 @@ class SignUpActivity : AppCompatActivity() {
                 reference.child(name).setValue(userMap).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this, CreateProfileActivity::class.java)
+                        val loginIntent = Intent(this, LoginEmailActivity::class.java)
+                        loginIntent.putExtra("email", email)
+                        loginIntent.putExtra("password", password)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, "Error al crear cuenta", Toast.LENGTH_SHORT).show()

@@ -3,6 +3,7 @@ package com.example.sortit
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sortit.calendarScreens.CalendarActivity
 import com.example.sortit.databinding.ActivityHomeBinding
 import com.example.sortit.taskScreens.CreateTaskActivity
 import com.example.sortit.taskScreens.ListTasksActivity
@@ -22,7 +23,8 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentShowList)
         }
         binding.createTaskBtn.setOnClickListener {
-            val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
+//            val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
+            val intentCreateTask = Intent(this, CalendarActivity::class.java)
             startActivity(intentCreateTask)
         }
     }

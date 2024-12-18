@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.SignUpActivity
 import com.example.sortit.HomeActivity
 import com.example.sortit.databinding.ActivityLoginBinding
+import com.example.sortit.utils.showTemporaryErrorMessage
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -24,6 +25,9 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.buttonLogGoogle.setOnClickListener {
+            binding.main.showTemporaryErrorMessage(layoutInflater,"Error con Google","No se pudo iniciar sesion con Google")
+        }
         binding.buttonLogCorreo.setOnClickListener {
             val intentLoginEmail = Intent(this, LoginEmailActivity::class.java)
             startActivity(intentLoginEmail)

@@ -60,6 +60,7 @@ class ListTasksActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun deleteTask(task: Task){
         CoroutineScope(Dispatchers.IO).launch {
             db.taskDao().deleteTask(task)

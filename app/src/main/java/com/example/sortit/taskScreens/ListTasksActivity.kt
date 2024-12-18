@@ -1,5 +1,6 @@
 package com.example.sortit.taskScreens
 
+import android.icu.util.Calendar
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,12 +45,38 @@ class ListTasksActivity : AppCompatActivity() {
     }
     override fun onResume() {
         super.onResume()
-        loadTasksFromDatabase()
+        //loadTasksFromDatabase()
     }
     private fun loadTasksFromDatabase() {
         CoroutineScope(Dispatchers.IO).launch {
             // Cargamos la lista
-            val tasks = db.taskDao().getAllTasks()
+            var tasks = db.taskDao().getAllTasks()
+            //println(tasks)
+            var tasksList = tasks.toMutableList()
+
+            val comparator = Comparator<Task> { task1, task2 ->
+                fun normalDate(fecha: Long): Long {
+                    val calendar = Calendar.getInstance().apply {
+                        timeInMillis = fecha
+                        set(Calendar.HOUR_OF_DAY, 0)
+                        set(Calendar.MINUTE, 0)
+                        set(Calendar.SECOND, 0)
+                        set(Calendar.MILLISECOND, 0)
+                    }
+                    return calendar.timeInMillis
+                }
+                val comparing = normalDate(task1.fechaEmpieza) compareTo normalDate(task2.fechaEmpieza)
+                if(comparing != 0) {
+                    comparing
+                } else {
+                    task1.horaEmpieza compareTo task2.horaEmpieza
+                }
+            }
+
+            tasksList.sortWith(comparator)
+            tasks = tasksList.toList()
+            //println(tasks)
+
             runOnUiThread {
                 taskAdapter = TaskAdapter(
                     tasks,
@@ -60,6 +87,7 @@ class ListTasksActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun deleteTask(task: Task){
         CoroutineScope(Dispatchers.IO).launch {
             db.taskDao().deleteTask(task)

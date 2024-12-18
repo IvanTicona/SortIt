@@ -32,7 +32,7 @@
                 android:id="@+id/titleIcon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="IconTask"
+                android:contentDescription="@string/task_icon"
                 android:src="@drawable/timeicon"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Tareas"
+                android:text="@string/tareas"
                 android:textSize="30sp"
                 android:textColor="@color/white"
                 app:layout_constraintTop_toTopOf="parent"
@@ -53,7 +53,7 @@
                 android:id="@+id/searchIcon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="IconTask"
+                android:contentDescription="@string/task_icon"
                 android:src="@drawable/searchicon"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
                 android:id="@+id/settingsIcon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="IconTask"
+                android:contentDescription="@string/task_icon"
                 android:src="@drawable/settingsicon"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +81,7 @@
                     android:id="@+id/titleArrange"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Organizar"
+                    android:text="@string/organizar"
                     android:textSize="30sp"
                     android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
@@ -117,6 +117,7 @@
                                 android:backgroundTint="@color/blue"
                             >
                                 <ImageView
+                                    android:contentDescription="@string/create_task"
                                     android:layout_width="35dp"
                                     android:layout_height="35dp"
                                     android:src="@drawable/addtaskicon"
@@ -126,7 +127,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Crea nueva"
+                                android:text="@string/crear_nueva"
                                 android:textSize="25sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -160,6 +161,7 @@
                                 android:backgroundTint="@color/green"
                                 >
                                 <ImageView
+                                    android:contentDescription="@string/edit_delete"
                                     android:layout_width="35dp"
                                     android:layout_height="35dp"
                                     android:src="@drawable/listicon"
@@ -169,7 +171,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Edit/Delete"
+                                android:text="@string/editar_eliminar"
                                 android:textSize="25sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +195,7 @@
                     android:id="@+id/activities"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Proximas Actividades"
+                    android:text="@string/proximas_actividades"
                     android:textSize="30sp"
                     android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-        android:text="¿Cómo planeas usar SortIt?"
+        android:text="@string/como_planeas_sortit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="15dp"
-        android:text="Elige las opciones que correspondan"
+        android:text="@string/elige_opciones"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +57,7 @@
             android:paddingHorizontal="35dp">
 
             <ImageView
+                android:contentDescription="@string/usern"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/usern"
@@ -67,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="16dp"
-                android:text="Personal"
+                android:text="@string/personal"
                 style="@style/text_normal_white" />
 
             <CheckBox
@@ -98,6 +99,7 @@
             android:paddingHorizontal="35dp">
 
             <ImageView
+                android:contentDescription="@string/workn"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/workn"/>
@@ -106,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="16dp"
-                android:text="Trabajo"
+                android:text="@string/trabajo"
                 style="@style/text_normal_white" />
 
 
@@ -138,6 +140,7 @@
             android:paddingHorizontal="35dp">
 
             <ImageView
+                android:contentDescription="@string/academicn"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/academicn"/>
@@ -147,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="16dp"
-                android:text="Educación"
+                android:text="@string/educacion"
                 style="@style/text_normal_white" />
 
 

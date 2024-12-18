@@ -22,6 +22,7 @@
             android:layout_marginBottom="15dp">
 
             <ImageView
+                android:contentDescription="@string/arrow_to_exit"
                 android:id="@+id/arrowLeft"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -68,7 +69,9 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    style="@style/text_normal_white"
+                    android:inputType="text"
+                    android:autofillHints=""/>
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividertitle"
@@ -91,7 +94,9 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    style="@style/text_normal_white"
+                    android:inputType="text"
+                    android:autofillHints=""/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -232,7 +237,9 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"/>
+                    style="@style/text_normal_white"
+                    android:autofillHints="emailAddress"
+                    android:inputType="textEmailAddress"/>
 
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerNotes"
@@ -254,7 +261,9 @@
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
                     style="@style/text_normal_white"
-                    android:gravity="top"/>
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:autofillHints=""/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

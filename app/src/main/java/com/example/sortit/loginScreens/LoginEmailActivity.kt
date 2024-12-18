@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.HomeActivity
+import com.example.sortit.SearchActivity
 import com.example.sortit.databinding.ActivityLoginEmailBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -27,9 +28,12 @@ class LoginEmailActivity : AppCompatActivity() {
             val email = binding.emailInput.text.toString()
             val password = binding.passwordInput.text.toString()
             signIn(email, password)
-//            createAccount(email, password)
+            createAccount(email, password)
         }
+
     }
+
+
 
     override fun onStart() {
         super.onStart()
@@ -41,23 +45,23 @@ class LoginEmailActivity : AppCompatActivity() {
         }
     }
 
-    // Funcion para pantalla Crear Cuenta
-//    fun createAccount(email: String, password: String){
-//        auth.createUserWithEmailAndPassword(email, password)
-//            .addOnCompleteListener(this) { task ->
-//                if (task.isSuccessful) {
-//                    // Sign in success, update UI with the signed-in user's information
-//                    println("createUserWithEmail:success")
-//                    val user = auth.currentUser
-//                    // updateUI(user)
-//                } else {
-//                    // If sign in fails, display a message to the user.
-//                    println("createUserWithEmail:failure")
-//                    println(task.exception)
-//                    // updateUI(null)
-//                }
-//            }
-//    }
+//     Funcion para pantalla Crear Cuenta
+    fun createAccount(email: String, password: String){
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    println("createUserWithEmail:success")
+                    val user = auth.currentUser
+                    // updateUI(user)
+                } else {
+                    // If sign in fails, display a message to the user.
+                    println("createUserWithEmail:failure")
+                    println(task.exception)
+                    // updateUI(null)
+                }
+            }
+    }
 
     fun signIn(email: String, password: String){
         // Validaciones
@@ -66,7 +70,7 @@ class LoginEmailActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     println("signInWithEmail:success")
                     val intentHomeScreen = Intent(this, HomeActivity::class.java)
-//                    startActivity(intentHomeScreen)
+                    startActivity(intentHomeScreen)
                 } else {
                     println("signInWithEmail:failure")
                     println(task.exception)

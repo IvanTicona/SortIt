@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priority_options">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string name="app_name">SortIt</string>
+    <string name="continuar_con_google">Continue with Google</string>
+    <string name="continuar_con_correo">Continue with email</string>
+    <string name="perfil">Profile</string>
+    <string name="usuario_1">User 1</string>
+    <string name="usuario1_gmail_com">user1@gmail.com</string>
+    <string name="resumen_de_actividades">Activity summary</string>
+    <string name="_2">2</string>
+    <string name="actividades_completadas">Completed activities</string>
+    <string name="listar_actividades">List activities</string>
+    <string name="ver_m_s"><![CDATA[See more >]]></string>
+    <string name="proyecto_progra_iii">Program III Project</string>
+    <string name="_07_12">07/12</string>
+    <string name="tarea_sistemas">Systems Task</string>
+    <string name="editar_actividad">Edit Activity</string>
+    <string name="_4">4</string>
+    <string name="_09_12">09/12</string>
+    <string name="actividades_pendientes">Pending activities</string>
+    <string name="app_icon">app icon</string>
+    <string name="home_icon">home icon</string>
+    <string name="calendar_icon">calendar icon</string>
+    <string name="person_icon">person icon</string>
+    <string name="settings_icon">settings icon</string>
+    <string name="buscar_icon">search icon</string>
+    <string name="pfp_icon">profile picture icon</string>
+    <string name="ajustes">Settings</string>
+    <string name="cuenta">Account</string>
+    <string name="cuentatext">Account</string>
+    <string name="idioma">Language</string>
+    <string name="nightthemeicon">night theme icon</string>
+    <string name="modo_nocturno">Night mode</string>
+    <string name="notificaciones">Notifications</string>
+    <string name="notificon">notification icon</string>
+    <string name="pructivityicon">productivity icon</string>
+    <string name="productividad">Productivity</string>
+    <string name="logouticon">logout icon</string>
+    <string name="cerrar_sesi_n">Log out</string>
+    <string name="felicidades_ya_diste_el_primer_paso_para_tener_una_vida_m_s_organizada">Congratulations! You\'ve taken the first step towards a more organized life</string>
+    <string name="subir_foto">Upload photo</string>
+    <string name="tu_perfil">Your profile</string>
+    <string name="abrir_sortit">Open SortIt</string>
+    <string name="ingresa_tu_nombre">Enter your name</string>
+    <string name="crea_tu_perfil">Create your profile</string>
+    <string name="foto_de_perfil">Profile picture</string>
+    <string name="icon_cameran">camera icon</string>
+    <string name="buscar_actividad">Search activity</string>
+    <string name="proyecto_1">Project 1</string>
+    <string name="_8_00_9_00_am">8:00 - 9:00 am</string>
+    <string name="recenticon">recent icon</string>
+    <string name="idiomaicon">language icon</string>
+    <string name="todo_el_dia">All day</string>
+    <string name="la_paz_bolivia">La Paz, Bolivia</string>
+    <string name="min_antes">10 min. before</string>
+    <string name="no_repetir">Do not repeat</string>
+    <string name="repasar">Review</string>
+    <string name="archivo_adjunto">Attachment</string>
+    <string name="demasiado_importante">(7) Too important</string>
+    <string name="cancelar">Cancel</string>
+    <string name="guardar">Save</string>
+    <string name="continuar">Continue</string>
+    <string name="ubi">Location</string>
+    <string name="casa">Home</string>
+    <string name="empieza">Starts</string>
+    <string name="lunes">Mon., Dec. 16 3:00 PM</string>
+    <string name="lunes_fin">Mon., Dec. 16 4:30 PM</string>
+    <string name="notas">Notes</string>
+    <string name="termina">Ends</string>
+    <string name="correo">Email</string>
+    <string name="prioridad">Priority</string>
+    <string name="titulo">Title</string>
+    <string name="ubicacion">Location</string>
+</resources>

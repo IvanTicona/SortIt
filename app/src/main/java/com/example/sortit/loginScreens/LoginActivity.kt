@@ -3,6 +3,7 @@ package com.example.sortit.loginScreens
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sortit.SignUpActivity
 import com.example.sortit.HomeActivity
 import com.example.sortit.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -26,6 +27,10 @@ class LoginActivity : AppCompatActivity() {
         binding.buttonLogCorreo.setOnClickListener {
             val intentLoginEmail = Intent(this, LoginEmailActivity::class.java)
             startActivity(intentLoginEmail)
+        }
+        binding.buttonCreateAccount.setOnClickListener() {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -11,8 +11,8 @@
         android:id="@+id/searchActivity"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="110dp"
         android:hint="@string/buscar_actividad"
         android:background="@drawable/rounded_searchbar"
@@ -29,23 +29,23 @@
         android:id="@+id/icon_buscar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="65dp"
         android:contentDescription="@string/buscar_icon"
         android:src="@drawable/searchn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="10dp"/>
 
     <ImageView
         android:id="@+id/icon_settings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginEnd="30dp"
         android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="10dp"/>
 
     <TextView
         android:id="@+id/txtRecentlySearched"

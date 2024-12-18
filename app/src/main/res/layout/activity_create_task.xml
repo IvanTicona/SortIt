@@ -18,7 +18,6 @@
         android:orientation="vertical"
     >
 
-        <!--    Header Screen    -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -48,7 +47,6 @@
             />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!--    Title and Ubication    -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,7 +104,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!--    Dates and Hours    -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -279,20 +276,19 @@
 
         </androidx.cardview.widget.CardView>
 
-        <!--   Priority    -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
             android:layout_marginBottom="15dp"
-            >
+            app:cardCornerRadius="15dp"
+        >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:paddingVertical="10dp"
-                >
+            >
                 <TextView
                     android:id="@+id/labelPriority"
                     app:layout_constraintStart_toStartOf="parent"
@@ -300,62 +296,56 @@
                     app:layout_constraintBottom_toBottomOf="@+id/definePriority"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/prioridad"
-                    android:textSize="17sp"
-                    android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
-                    />
+                    android:text="@string/prioridad"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                />
                 <Spinner
                     android:id="@+id/definePriority"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                 />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <!--    Email and Notes    -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
             app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp"
-            >
+        >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                >
+            >
                 <EditText
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
                     android:id="@+id/bindEmail"
+                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/correo"
-                    android:textSize="17sp"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"
-                    android:inputType="textEmailAddress"
-                    android:autofillHints="emailAddress"
-                    />
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                />
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerNotes"
-                    app:layout_constraintTop_toBottomOf="@+id/bindEmail"
-                    app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     app:dividerColor="@color/darkgray"
-                    />
-                <EditText
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
+                    app:layout_constraintTop_toBottomOf="@+id/bindEmail"
+                />
+                <EditText
                     android:id="@+id/bindNotes"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
@@ -364,16 +354,16 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"
                     android:gravity="top"
                     android:inputType="text"
                     android:autofillHints=""
-                    />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"/>
+                />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <!--    Buttons    -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -419,5 +409,4 @@
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

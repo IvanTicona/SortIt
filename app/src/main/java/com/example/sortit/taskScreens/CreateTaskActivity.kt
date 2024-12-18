@@ -7,13 +7,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.R
 import com.example.sortit.dataClasses.Task
 import com.example.sortit.databinding.ActivityCreateTaskBinding
 import com.example.sortit.room.AppDatabase
 import com.example.sortit.room.DatabaseProvider
+import com.example.sortit.utils.getDateLong
+import com.example.sortit.utils.getHourLong
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -31,13 +32,16 @@ class CreateTaskActivity : AppCompatActivity() {
         binding = ActivityCreateTaskBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        // DB
+        db = DatabaseProvider.getDatabase(this)
+
         // Spinner
         val priorities = resources.getStringArray(R.array.priority_options)
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, priorities)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         binding.definePriority.adapter = adapter
-        // Room
-        db = DatabaseProvider.getDatabase(this)
+
         // Listeners
         binding.btnCreateTask.setOnClickListener {
             createTask()
@@ -116,9 +120,13 @@ class CreateTaskActivity : AppCompatActivity() {
             )
             timePickerDialog.show()
         }
+        binding.arrowLeft.setOnClickListener {
+            runOnUiThread {
+                finish()
+            }
+        }
     }
-
-    fun createTask(){
+    private fun createTask(){
         val name = binding.createName.text.toString().trim()
         val ubication = binding.createUbication.text.toString().trim()
         val notes = binding.bindNotes.text.toString().trim()
@@ -133,16 +141,16 @@ class CreateTaskActivity : AppCompatActivity() {
             binding.labelPriority.error = "Define una prioridad"
             return
         }
-        // Create New Task
+        // Crear Nueva Task
         val newTask = Task(
             completado = false,
             nombre = name,
             ubicacion = ubication,
             todoElDia = allDay,
-            fechaEmpieza = getDateLong(binding.dateStartPicker),
-            fechaTermina = getDateLong(binding.dateEndPicker),
-            horaEmpieza = getHourLong(binding.hourStartPicker),
-            horaTermina = getHourLong(binding.hourEndPicker),
+            fechaEmpieza = getDateLong(binding.dateStartPicker.text.toString()),
+            fechaTermina = getDateLong(binding.dateEndPicker.text.toString()),
+            horaEmpieza = getHourLong(binding.hourStartPicker.text.toString()),
+            horaTermina = getHourLong(binding.hourEndPicker.text.toString()),
             prioridad = targetPriority,
             correo = email,
             notas = notes
@@ -154,28 +162,5 @@ class CreateTaskActivity : AppCompatActivity() {
                 finish()
             }
         }
-    }
-
-    fun getDateLong(view: TextView): Long {
-        val dateText = view.text.toString()
-        val parts = dateText.split("/")
-        val day = parts[0].toInt()
-        val month = parts[1].toInt() - 1
-        val year = parts[2].toInt()
-        val calDate = Calendar.getInstance()
-        calDate.set(year, month, day, 0, 0, 0)
-        return calDate.timeInMillis
-    }
-
-    fun getHourLong(view: TextView): Long {
-        val timeText = view.text.toString()
-        val timeParts = timeText.split(":")
-        val hour = timeParts[0].toInt()
-        val minute = timeParts[1].toInt()
-        val calTime = Calendar.getInstance()
-        calTime.set(Calendar.HOUR_OF_DAY, hour)
-        calTime.set(Calendar.MINUTE, minute)
-        calTime.set(Calendar.SECOND, 0)
-        return calTime.timeInMillis
     }
 }

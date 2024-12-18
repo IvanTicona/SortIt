@@ -15,8 +15,8 @@ interface TaskDao {
     fun getTaskById(id: Int): Task
     @Insert
     fun createTask(task: Task)
-//    @Delete
-//    fun deleteTask(id: Int)
-//    @Update
-//    fun editTask(task: Task)
+    @Delete
+    fun deleteTask(task: Task)
+    @Update
+    fun editTask(task: Task)
 }

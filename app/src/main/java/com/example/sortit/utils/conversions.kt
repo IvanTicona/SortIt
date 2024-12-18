@@ -1,5 +1,6 @@
 package com.example.sortit.utils
 
+import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -38,4 +39,8 @@ fun longToDateString(dateInMillis: Long): String {
 fun longToHourString(timeInMillis: Long): String {
     val timeFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
     return timeFormat.format(Date(timeInMillis))
+}
+
+fun dpToPx(dp: Int, density: Float): Int {
+    return (dp.toFloat() * density).toInt()
 }

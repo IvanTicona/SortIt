@@ -28,7 +28,7 @@ class LoginEmailActivity : AppCompatActivity() {
             val email = binding.emailInput.text.toString()
             val password = binding.passwordInput.text.toString()
             signIn(email, password)
-//            createAccount(email, password)
+            createAccount(email, password)
         }
 
     }

@@ -61,7 +61,7 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    saveUserData(name, email)
+                    saveUserData(name, email, password)
 
                     Toast.makeText(this, "Cuenta creada con éxito", Toast.LENGTH_SHORT).show()
 
@@ -73,11 +73,12 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
-    private fun saveUserData(name: String, email: String) {
+    private fun saveUserData(name: String, email: String, password: String) {
         val userId = auth.currentUser?.uid ?: return
         val user = mapOf(
             "name" to name,
-            "email" to email
+            "email" to email,
+            "password" to password
         )
 
         database.child("users").child(userId).setValue(user)

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateAccountActivity">
+    tools:context=".SignUpActivity">
 
         <ImageView
             android:id="@+id/appIcon"
@@ -111,16 +111,16 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                app:layout_constraintStart_toStartOf="@id/SignInButton"
-                app:layout_constraintTop_toTopOf="@id/SignInButton"
-                app:layout_constraintBottom_toBottomOf="@id/SignInButton"
+                app:layout_constraintStart_toStartOf="@id/SignUpButton"
+                app:layout_constraintTop_toTopOf="@id/SignUpButton"
+                app:layout_constraintBottom_toBottomOf="@id/SignUpButton"
                 android:src="@drawable/signinicon"
                 android:elevation="2dp"
                 android:layout_marginStart="55dp"
                 />
             <Button
                 android:layout_marginTop="20dp"
-                android:id="@+id/SignInButton"
+                android:id="@+id/SignUpButton"
                 android:layout_width="350dp"
                 android:layout_height="65dp"
                 android:backgroundTint="@color/purple"

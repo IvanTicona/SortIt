@@ -3,9 +3,8 @@ package com.example.sortit.loginScreens
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.sortit.CreateAccountActivity
+import com.example.sortit.SignUpActivity
 import com.example.sortit.HomeActivity
-import com.example.sortit.SearchActivity
 import com.example.sortit.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -30,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intentLoginEmail)
         }
         binding.buttonCreateAccount.setOnClickListener() {
-            val intent = Intent(this, CreateAccountActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
     }

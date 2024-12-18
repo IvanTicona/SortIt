@@ -16,7 +16,7 @@
         android:theme="@style/Theme.SortIt"
         tools:targetApi="31">
         <activity
-            android:name=".CreateAccountActivity"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".taskScreens.EditTaskActivity"
@@ -31,7 +31,7 @@
             android:name=".ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".settingScreens.SettingsActivity"
+            android:name=".loginScreens.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,9 +42,9 @@
         <activity
             android:name=".taskScreens.ListTasksActivity"
             android:exported="false" />
-<!--         <activity-->
-<!--         android:name=".settingScreens.SettingsActivity"-->
-<!--         android:exported="false" />-->
+         <activity
+         android:name=".settingScreens.SettingsActivity"
+         android:exported="false" />
         <activity
             android:name=".taskScreens.CreateTaskActivity"
             android:exported="false" />

@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".HomeActivity"
 >
 
@@ -43,35 +42,34 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tareas"
                 android:textSize="30sp"
-                android:textColor="@color/white"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/titleIcon"
                 android:layout_marginStart="20dp"
-                style="@style/text_semibold_white"
+                style="@style/text_semibold"
 
                 />
-            <ImageView
-                android:id="@+id/searchIcon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:contentDescription="@string/task_icon"
-                android:src="@drawable/searchicon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/settingsIcon"
-                android:layout_marginEnd="20dp"
-            />
-            <ImageView
-                android:id="@+id/settingsIcon"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:contentDescription="@string/task_icon"
-                android:src="@drawable/settingsicon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-            />
+                <ImageView
+                    android:id="@+id/icon_buscar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="55dp"
+                    android:contentDescription="@string/buscar_icon"
+                    android:src="@drawable/searchn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginVertical="10dp"/>
+
+                <ImageView
+                    android:id="@+id/icon_settings"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:contentDescription="@string/settings_icon"
+                    android:src="@drawable/settingsn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginVertical="10dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -84,11 +82,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/organizar"
-                    android:textSize="30sp"
-                    android:textColor="@color/white"
+                    android:textSize="25sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    style="@style/text_semibold_white"
+                    style="@style/text_semibold"
 
                     />
                 <LinearLayout
@@ -103,7 +100,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/darkpurple"
+                        app:cardBackgroundColor="@color/card_background"
                         app:cardCornerRadius="20dp"
                     >
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -131,12 +128,11 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textSize="25sp"
+                                android:textSize="20sp"
                                 android:text="Crear una nueva tarea"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_margin="15dp"
-                                android:textColor="@color/white"
                                 style="@style/text_semibold_white"
 
                                 />
@@ -149,7 +145,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:backgroundTint="@color/darkpurple"
+                        app:cardBackgroundColor="@color/card_background"
                         app:cardCornerRadius="20dp"
                     >
                         <androidx.constraintlayout.widget.ConstraintLayout
@@ -178,11 +174,10 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Todas las actividades"
-                                android:textSize="25sp"
+                                android:textSize="20sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_margin="15dp"
-                                android:textColor="@color/white"
                                 style="@style/text_semibold_white"
                                 />
                         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -203,11 +198,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/proximas_actividades"
-                    android:textSize="30sp"
-                    android:textColor="@color/white"
+                    android:textSize="25sp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    style="@style/text_semibold_white"
+                    style="@style/text_semibold"
                     />
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
@@ -228,7 +222,7 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="180dp"
                             android:layout_height="150dp"
-                            android:backgroundTint="@color/darkpurple"
+                            app:cardBackgroundColor="@color/card_background"
                             app:cardCornerRadius="20dp"
                             >
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -251,7 +245,6 @@
                                     app:layout_constraintBottom_toBottomOf="@+id/statusbtn"
                                     app:layout_constraintStart_toEndOf="@+id/statusbtn"
                                     android:text="STATE"
-                                    android:textColor="@color/white"
                                     android:layout_margin="15dp"
                                 />
                                 <TextView
@@ -259,7 +252,6 @@
                                     android:layout_height="wrap_content"
                                     android:text="TITLE_TASK"
                                     android:textSize="25sp"
-                                    android:textColor="@color/white"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +278,6 @@
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintEnd_toEndOf="parent"
                                         android:text="12/04"
-                                        android:textColor="@color/white"
                                         app:layout_constraintTop_toTopOf="parent"
                                         app:layout_constraintBottom_toBottomOf="parent"
                                     />

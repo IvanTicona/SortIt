@@ -27,14 +27,14 @@
         <item name="fontFamily">@font/pssemibold</item>
     </style>
 
-    <style name="text_normal_gray">
+    <style name="text_normal">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/psregular</item>
     </style>
-    <style name="text_semibold_gray">
+    <style name="text_semibold">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/pssemibold</item>
     </style>
 
@@ -44,9 +44,9 @@
         <item name="fontFamily">@font/pssemibold</item>
     </style>
 
-    <style name="text_small_gray">
+    <style name="text_small">
         <item name="android:textSize">15sp</item>
-        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/psregular</item>
     </style>
 

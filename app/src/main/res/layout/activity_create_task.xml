@@ -7,7 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".taskScreens.CreateTaskActivity"
-    android:background="@color/black"
 >
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +27,7 @@
                 android:id="@+id/arrowLeft"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/arrowleft"
+                android:src="@drawable/arrowleftn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -38,8 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/crear_nueva_actividad"
-                android:textColor="@color/white"
-                android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 style="@style/title_bold_big"
@@ -50,7 +47,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/darkpurple"
+            app:cardBackgroundColor="@color/card_background"
             app:cardCornerRadius="15dp"
             android:layout_marginBottom="15dp"
         >
@@ -66,13 +63,9 @@
                     android:id="@+id/createName"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textSize="17sp"
                     android:hint="@string/titulo"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"
-                    android:inputType="text"
+                    app:cardBackgroundColor="@color/card_background"
+                    style="@style/text_normal"                    android:inputType="text"
                     android:autofillHints=""
                     />
                 <com.google.android.material.divider.MaterialDivider
@@ -91,14 +84,11 @@
                     android:id="@+id/createUbication"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textSize="17sp"
                     android:hint="@string/ubicacion"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
-                    style="@style/text_normal_white"
                     android:inputType="text"
                     android:autofillHints=""
+                    style="@style/text_normal"
+
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -107,7 +97,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/darkpurple"
+            app:cardBackgroundColor="@color/card_background"
             app:cardCornerRadius="15dp"
             android:layout_marginBottom="15dp"
             >
@@ -126,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/todo_el_dia"
                     android:textSize="17sp"
-                    android:textColor="@color/white"
+                    style="@style/text_normal"
                     android:fontFamily="@font/psregular"
                 />
                 <Switch
@@ -158,7 +148,7 @@
                     android:layout_height="30dp"
                     android:text="@string/empieza"
                     android:textSize="17sp"
-                    android:textColor="@color/white"
+                    style="@style/text_normal"
                     android:fontFamily="@font/psregular"
                 />
                 <androidx.cardview.widget.CardView
@@ -222,9 +212,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:text="@string/termina"
-                    android:textSize="17sp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"
+                    style="@style/text_normal"
+
                     />
                 <androidx.cardview.widget.CardView
                     app:layout_constraintTop_toBottomOf="@+id/dividerDateEnd"
@@ -279,7 +268,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/darkpurple"
+            app:cardBackgroundColor="@color/card_background"
             android:layout_marginBottom="15dp"
             app:cardCornerRadius="15dp"
         >
@@ -296,10 +285,8 @@
                     app:layout_constraintBottom_toBottomOf="@+id/definePriority"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/psregular"
+                    style="@style/text_normal"
                     android:text="@string/prioridad"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
                 />
                 <Spinner
                     android:id="@+id/definePriority"
@@ -316,7 +303,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
-            android:backgroundTint="@color/darkpurple"
+            app:cardBackgroundColor="@color/card_background"
             app:cardCornerRadius="15dp"
         >
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -326,13 +313,11 @@
             >
                 <EditText
                     android:id="@+id/bindEmail"
-                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="@string/correo"
-                    android:textColor="@color/white"
+                    style="@style/text_normal"
                     android:textColorHint="@color/darkgray"
-                    android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -349,14 +334,12 @@
                     android:id="@+id/bindNotes"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:textSize="17sp"
                     android:hint="@string/notas"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/darkgray"
-                    android:backgroundTint="@color/darkpurple"
+                    app:cardBackgroundColor="@color/card_background"
                     android:gravity="top"
                     android:inputType="text"
                     android:autofillHints=""
+                    style="@style/text_normal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dividerNotes"/>
                 />

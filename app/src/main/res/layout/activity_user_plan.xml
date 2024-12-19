@@ -34,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_plan"
-        style="@style/text_normal_gray"
+        style="@style/text_normal"
         />
 
     <androidx.cardview.widget.CardView

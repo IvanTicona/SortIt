@@ -20,7 +20,7 @@
         android:id="@+id/icon_buscar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginEnd="55dp"
         android:contentDescription="@string/buscar_icon"
         android:src="@drawable/searchn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +31,7 @@
         android:id="@+id/icon_settings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="10dp"
         android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +43,8 @@
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_margin="25dp"
-        app:cardBackgroundColor="@color/card_background"        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/perfil">
@@ -73,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/usuario1_gmail_com"
-                style="@style/text_normal_gray"/>
+                style="@style/text_normal"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -183,7 +184,7 @@
         app:layout_constraintBaseline_toBaselineOf="@id/activity_list_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tareas"
-        style="@style/text_normal_gray"/>
+        style="@style/text_normal"/>
 
     <LinearLayout
         android:id="@+id/activity_list"

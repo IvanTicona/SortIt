@@ -6,7 +6,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".loginScreens.LoginEmailActivity"
 >
 
@@ -25,7 +24,7 @@
         android:id="@+id/fields"
         android:layout_width="match_parent"
         android:layout_height="280dp"
-        android:background="@color/darkpurple"
+        app:cardBackgroundColor="@color/card_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="2dp"

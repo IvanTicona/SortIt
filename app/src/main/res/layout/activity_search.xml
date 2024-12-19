@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/text_semibold_gray"
+        style="@style/text_semibold"
         android:inputType="text"
         android:autofillHints=""/>
 
@@ -29,7 +29,7 @@
         android:id="@+id/icon_buscar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="65dp"
+        android:layout_marginEnd="55dp"
         android:contentDescription="@string/buscar_icon"
         android:src="@drawable/searchn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         android:id="@+id/icon_settings"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="10dp"
         android:contentDescription="@string/settings_icon"
         android:src="@drawable/settingsn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginStart="28dp"
         app:layout_constraintTop_toBottomOf="@id/searchActivity"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/text_semibold_gray"
+        style="@style/text_semibold"
         />
 
     <LinearLayout
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_8_00_9_00_am"
-                    style="@style/text_small_gray"
+                    style="@style/text_small"
                     />
             </LinearLayout>
         </LinearLayout>

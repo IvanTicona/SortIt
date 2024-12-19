@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title_text"
-        style="@style/text_normal_gray" />
+        style="@style/text_normal" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profile_card"
@@ -41,7 +41,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
-        app:cardBackgroundColor="@color/darkpurple"
+        app:cardBackgroundColor="@color/card_background"
         app:cardCornerRadius="18dp"
         app:layout_constraintTop_toBottomOf="@id/subtitle_text"
         app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
                 app:layout_constraintTop_toBottomOf="@id/upload_section"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                style="@style/text_normal_gray"
+                style="@style/text_normal"
                 />
 
         </LinearLayout>

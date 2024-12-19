@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:padding="30dp"
             android:layout_height="480dp"
-            android:background="@color/darkpurple"
+            app:cardBackgroundColor="@color/card_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:elevation="2dp"

@@ -51,12 +51,12 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentCreateTask)
         }
 
-        binding.searchIcon.setOnClickListener(){
+        binding.iconBuscar.setOnClickListener(){
             val intent = Intent(this, SearchActivity::class.java)
             startActivity(intent)
 
         }
-        binding.settingsIcon.setOnClickListener(){
+        binding.iconSettings.setOnClickListener(){
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }

@@ -75,8 +75,8 @@ class SettingsActivity : AppCompatActivity() {
         Locale.setDefault(locale)
         val config = resources.configuration
         config.setLocale(locale)
-        resources.updateConfiguration(config, resources.displayMetrics)
-
-        binding.root.requestLayout()
+        applicationContext.createConfigurationContext(config)
     }
+
+
 }

@@ -18,11 +18,7 @@ class SearchActivity : AppCompatActivity() {
         binding= ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.iconBuscar.setOnClickListener(){
-            val intent = Intent(this, SearchActivity::class.java)
-            startActivity(intent)
 
-        }
         binding.iconSettings.setOnClickListener(){
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)

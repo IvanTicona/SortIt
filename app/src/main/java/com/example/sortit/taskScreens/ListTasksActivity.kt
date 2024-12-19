@@ -29,6 +29,12 @@ class ListTasksActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.arrowLeft.setOnClickListener {
+            runOnUiThread {
+                finish()
+            }
+        }
+
         // DB
         db = DatabaseProvider.getDatabase(this)
 
@@ -42,10 +48,11 @@ class ListTasksActivity : AppCompatActivity() {
 
         // Cargar DB
         loadTasksFromDatabase()
+
     }
     override fun onResume() {
         super.onResume()
-        //loadTasksFromDatabase()
+        loadTasksFromDatabase()
     }
     private fun loadTasksFromDatabase() {
         CoroutineScope(Dispatchers.IO).launch {

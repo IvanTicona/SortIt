@@ -5,9 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".taskScreens.EditTaskActivity"
-    android:background="@color/black"
->
+    tools:context=".taskScreens.TaskActivity"
+    android:background="@color/black">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,10 +32,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
+                android:id="@+id/title_task"
                 style="@style/title_bold_big"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/editar_actividad"
+                android:text="@string/titulo"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 android:layout_marginTop="5dp"
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp">
 
-                <EditText
+                <!--<EditText
                     android:id="@+id/createName"
                     style="@style/text_normal_white"
                     android:layout_width="match_parent"
@@ -69,16 +70,16 @@
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="@+id/dividertitle"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
 
-                <com.google.android.material.divider.MaterialDivider
+                <!--<com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividertitle"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     app:dividerColor="@color/darkgray"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
 
                 <EditText
                     android:id="@+id/createUbication"
@@ -276,13 +277,13 @@
             android:backgroundTint="@color/darkpurple"
             android:layout_marginBottom="15dp"
             app:cardCornerRadius="15dp"
-        >
+            >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
                 android:paddingVertical="10dp"
-            >
+                >
                 <TextView
                     android:id="@+id/labelPriority"
                     app:layout_constraintStart_toStartOf="parent"
@@ -294,14 +295,14 @@
                     android:text="@string/prioridad"
                     android:textColor="@color/white"
                     android:textSize="17sp"
-                />
+                    />
                 <Spinner
                     android:id="@+id/definePriority"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                />
+                    />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -311,7 +312,7 @@
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
             app:cardCornerRadius="15dp"
-        >
+            >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -330,7 +331,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/dividerNotes"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                />
+                    />
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividerNotes"
                     android:layout_width="match_parent"
@@ -338,7 +339,7 @@
                     app:dividerColor="@color/darkgray"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/bindEmail"
-                />
+                    />
                 <EditText
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
@@ -368,17 +369,18 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/btnCancel"
-                    android:layout_width="170dp"
+                    android:id="@+id/btnOK"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/purplebar"
-                    android:text="@string/cancelar"
+                    android:text="@string/ok"
                     android:textSize="20sp"
                     app:cornerRadius="15dp"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.divider.MaterialDivider
+                <!--<com.google.android.material.divider.MaterialDivider
                     android:layout_width="1dp"
                     android:layout_height="50dp"
                     android:orientation="vertical"
@@ -386,9 +388,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
 
-                <Button
+                <!--<Button
                     android:id="@+id/btnCreateTask"
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
@@ -397,7 +399,7 @@
                     android:textSize="20sp"
                     app:cornerRadius="15dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />-->
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

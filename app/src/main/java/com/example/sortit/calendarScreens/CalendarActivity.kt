@@ -1,5 +1,6 @@
 package com.example.sortit.calendarScreens
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.R
@@ -9,6 +10,7 @@ class CalendarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCalendarBinding
 
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalendarBinding.inflate(layoutInflater)
@@ -16,9 +18,8 @@ class CalendarActivity : AppCompatActivity() {
         setContentView(view)
 
         if (savedInstanceState == null) {
-            val calendarFragment = CalendarFragment.newInstance()
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, calendarFragment)
+                .replace(R.id.fragmentContainer, CalendarFragment())
                 .commit()
         }
     }

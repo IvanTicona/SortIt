@@ -68,6 +68,7 @@ dependencies {
     implementation("androidx.room:room-ktx:$room_version")
 
     implementation("com.google.android.material:material:1.8.0")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
 
 //    val room_version = "2.6.1"
 //    implementation("androidx.room:room-runtime:$room_version")

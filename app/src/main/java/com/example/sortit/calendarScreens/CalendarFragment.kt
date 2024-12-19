@@ -5,15 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.sortit.adapters.WeekPagerAdapter
 import com.example.sortit.databinding.FragmentCalendarBinding
 import java.util.Calendar
+import java.util.Date
 
-class CalendarFragment : Fragment(), WeekFragment.OnWeekChangeListener {
+class CalendarFragment : Fragment() {
 
     private var _binding: FragmentCalendarBinding? = null
     private val binding get() = _binding!!
 
-    private var currentWeekCalendar: Calendar = Calendar.getInstance()
+    private lateinit var weekPagerAdapter: WeekPagerAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,48 +28,17 @@ class CalendarFragment : Fragment(), WeekFragment.OnWeekChangeListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Cargar WeekFragment y DayFragment
-        loadWeekFragment()
-        loadDayFragment()
-    }
+        val initialDate = Date() // Fecha actual
+        weekPagerAdapter = WeekPagerAdapter(initialDate)
 
-    private fun loadWeekFragment() {
-        val weekFragment = WeekFragment.newInstance(currentWeekCalendar.time)
-        childFragmentManager.beginTransaction()
-            .replace(binding.weekFragmentContainer.id, weekFragment)
-            .commit()
-    }
+        binding.weekViewPager.adapter = weekPagerAdapter
 
-    private fun loadDayFragment() {
-        val dayFragment = DayFragment.newInstance(
-            currentWeekCalendar.get(Calendar.YEAR),
-            currentWeekCalendar.get(Calendar.MONTH),
-            currentWeekCalendar.get(Calendar.DAY_OF_MONTH)
-        )
-        childFragmentManager.beginTransaction()
-            .replace(binding.dayFragmentContainer.id, dayFragment)
-            .commit()
-    }
-
-    override fun onWeekChanged(newWeekCalendar: Calendar) {
-        currentWeekCalendar = newWeekCalendar
-        // Actualizar DayFragment para mostrar el primer día de la nueva semana
-        loadDayFragment()
-    }
-
-    fun updateDay(newDayCalendar: Calendar) {
-        currentWeekCalendar = newDayCalendar
-        // Actualizar WeekFragment para resaltar la nueva fecha
-        loadWeekFragment()
+        // Establecer la posición inicial en el medio para permitir navegación infinita
+        binding.weekViewPager.setCurrentItem(Int.MAX_VALUE / 2, false)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = CalendarFragment()
     }
 }

@@ -28,13 +28,16 @@ class ProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.homeButton.setOnClickListener(){
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
+        binding.navigationBar.homeButton.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
         }
-        binding.profileButton.setOnClickListener(){
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
+
+//        binding.navigationBar.calendarButton.setOnClickListener {
+//            startActivity(Intent(this, CalendarActivity::class.java))
+//        }
+
+        binding.navigationBar.profileButton.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
         }
     }
 }

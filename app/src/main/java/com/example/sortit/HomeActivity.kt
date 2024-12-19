@@ -61,5 +61,17 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.navigationBar.homeButton.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+//        binding.navigationBar.calendarButton.setOnClickListener {
+//            startActivity(Intent(this, CalendarActivity::class.java))
+//        }
+
+        binding.navigationBar.profileButton.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
     }
 }

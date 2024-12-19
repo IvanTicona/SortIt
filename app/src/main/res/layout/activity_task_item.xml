@@ -19,6 +19,7 @@
             android:layout_height="0.5dp"
             app:dividerColor="@color/darkgray"
         />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/calendarImg"
             app:layout_constraintStart_toStartOf="parent"

@@ -86,7 +86,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     style="@style/text_semibold"
-
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -104,6 +103,7 @@
                         app:cardCornerRadius="20dp"
                     >
                         <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/create_card"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                         >
@@ -149,6 +149,7 @@
                         app:cardCornerRadius="20dp"
                     >
                         <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/edit_card"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             >

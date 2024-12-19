@@ -112,4 +112,10 @@
     <string name="ingrese_su_nombre">Ingrese su nombre</string>
     <string name="confirmar_contra">Confirmar contraseña</string>
     <string name="create_account_logo">create_account_logo</string>
+    <string name="date">Date</string>
+    <string name="title_task">TITLE_TASK</string>
+    <string name="time">Time</string>
+    <string name="actividades">Actividades</string>
+    <string name="ok">OK</string>
+    <string name="crear_nueva_tarea">Crear nueva tarea</string>
 </resources>

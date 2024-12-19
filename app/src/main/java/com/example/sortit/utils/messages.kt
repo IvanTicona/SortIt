@@ -36,10 +36,14 @@ fun ConstraintLayout.showTemporaryErrorMessage(
     }
     binding.root.layoutParams = layoutParams
 
+    binding.root.alpha = 0f
     this.addView(binding.root)
+    binding.root.animate().alpha(1f).setDuration(500).start()
 
     Handler(Looper.getMainLooper()).postDelayed({
-        this.removeView(binding.root)
+        binding.root.animate().alpha(0f).setDuration(500).withEndAction {
+            this.removeView(binding.root)
+        }.start()
     }, duration)
 }
 
@@ -69,10 +73,14 @@ fun ConstraintLayout.showTemporaryWarningMessage(
     }
     binding.root.layoutParams = layoutParams
 
+    binding.root.alpha = 0f
     this.addView(binding.root)
+    binding.root.animate().alpha(1f).setDuration(500).start()
 
     Handler(Looper.getMainLooper()).postDelayed({
-        this.removeView(binding.root)
+        binding.root.animate().alpha(0f).setDuration(500).withEndAction {
+            this.removeView(binding.root)
+        }.start()
     }, duration)
 }
 
@@ -102,9 +110,13 @@ fun ConstraintLayout.showTemporarySuccessMessage(
     }
     binding.root.layoutParams = layoutParams
 
+    binding.root.alpha = 0f
     this.addView(binding.root)
+    binding.root.animate().alpha(1f).setDuration(500).start()
 
     Handler(Looper.getMainLooper()).postDelayed({
-        this.removeView(binding.root)
+        binding.root.animate().alpha(0f).setDuration(500).withEndAction {
+            this.removeView(binding.root)
+        }
     }, duration)
 }

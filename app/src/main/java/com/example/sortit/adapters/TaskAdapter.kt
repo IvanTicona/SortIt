@@ -24,7 +24,7 @@ class TaskAdapter(
     }
     // Crear la vista
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_task_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_task, parent, false)
         return TaskViewHolder(view)
     }
     // Asignar los datos a las vistas

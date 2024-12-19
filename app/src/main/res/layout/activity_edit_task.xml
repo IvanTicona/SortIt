@@ -31,12 +31,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
-                android:id="@+id/headerScreen"
                 style="@style/title_bold_big"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/editar_actividad"
                 android:textSize="25sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintStart_toEndOf="@id/arrowLeft"
                 app:layout_constraintTop_toTopOf="parent"
                 android:textAlignment="center"
                 />

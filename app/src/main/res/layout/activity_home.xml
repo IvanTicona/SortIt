@@ -86,7 +86,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     style="@style/text_semibold"
-
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -191,7 +190,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+            >
 
                 <TextView
                     android:id="@+id/activities"
@@ -203,13 +204,13 @@
                     app:layout_constraintStart_toStartOf="parent"
                     style="@style/text_semibold"
                     />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewTasksHome"
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/activities"
                     app:layout_constraintStart_toStartOf="parent"
-                 android:layout_height="wrap_content" android:layout_width="wrap_content">
+                >
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="170dp"
@@ -297,34 +298,7 @@
 
                     </LinearLayout>
 
-                </HorizontalScrollView
-                    android:scrollbars="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/activities"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="5dp"/>
-
-                <TextView
-                    android:id="@+id/priority_queue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cola_de_prioridad"
-                    android:textSize="30sp"
-                    android:textColor="@color/white"
-                    app:layout_constraintTop_toBottomOf="@id/recyclerViewTasksHome"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewTasksPriority"
-                    android:orientation="horizontal"
-                    android:scrollbars="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/priority_queue"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginTop="5dp"/>
+                </HorizontalScrollView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

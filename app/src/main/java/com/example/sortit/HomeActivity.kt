@@ -83,6 +83,11 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        loadTasksFromDatabase()
+    }
+
     private fun loadTasksFromDatabase() {
         CoroutineScope(Dispatchers.IO).launch {
             // Cargamos la lista de tareas desde la base de datos

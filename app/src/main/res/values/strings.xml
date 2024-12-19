@@ -118,4 +118,6 @@
     <string name="actividades">Actividades</string>
     <string name="ok">OK</string>
     <string name="crear_nueva_tarea">Crear nueva tarea</string>
+    <string name="cola_de_prioridad">Cola de prioridad</string>
+    <string name="fecha">Fecha</string>
 </resources>

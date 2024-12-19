@@ -50,9 +50,10 @@ class LoginEmailActivity : AppCompatActivity() {
     }
 
     private fun validatePassword(password: String): Boolean {
-        val regexPswd = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?\":{}|<>])[A-Za-z\\d!@#\$%^&*(),.?\":{}|<>]{8,}$"
-        return password.matches(Regex(regexPswd))
+        val regexPswd = """^.{7,}$""".toRegex()
+        return regexPswd.matches(password)
     }
+
 
     fun signIn(email: String, password: String){
         // Validaciones

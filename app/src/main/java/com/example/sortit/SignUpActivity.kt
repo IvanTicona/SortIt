@@ -63,7 +63,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun validatePassword(password: String): Boolean {
-        val regexPswd = """^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?":{}|<>])[A-Za-z\d!@#\$%^&*(),.?":{}|<>]{8,}$""".toRegex()
+        val regexPswd = """^.{7,}$""".toRegex()
         return regexPswd.matches(password)
     }
 
@@ -76,7 +76,7 @@ class SignUpActivity : AppCompatActivity() {
         if (!validatePassword(password)) {
             Toast.makeText(
                 this,
-                "Password must have at least 8 characters, one uppercase letter, one lowercase letter, and one special character",
+                "La contraseña debe tener al menos 7 caracteres.",
                 Toast.LENGTH_LONG
             ).show()
             return

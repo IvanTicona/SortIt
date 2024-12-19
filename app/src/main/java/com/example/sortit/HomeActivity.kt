@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.dataClasses.Task
 import com.example.sortit.databinding.ActivityHomeBinding
+import com.example.sortit.databinding.ActivityProfileBinding
 import com.example.sortit.settingScreens.SettingsActivity
 import com.example.sortit.taskScreens.CreateTaskActivity
 import com.example.sortit.taskScreens.ListTasksActivity

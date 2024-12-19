@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.sortit.calendarScreens.CalendarActivity
 import com.example.sortit.databinding.ActivityProfileBinding
 import com.example.sortit.databinding.ActivitySearchBinding
 import com.example.sortit.settingScreens.SettingsActivity
@@ -28,9 +29,9 @@ class SearchActivity : AppCompatActivity() {
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
-//        binding.navigationBar.calendarButton.setOnClickListener {
-//            startActivity(Intent(this, CalendarActivity::class.java))
-//        }
+        binding.navigationBar.calendarButton.setOnClickListener {
+            startActivity(Intent(this, CalendarActivity::class.java))
+        }
 
         binding.navigationBar.profileButton.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))

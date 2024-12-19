@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.sortit.adapters.WeekPagerAdapter
 import com.example.sortit.databinding.FragmentCalendarBinding
-import java.util.Calendar
 import java.util.Date
 
 class CalendarFragment : Fragment() {
@@ -27,13 +26,9 @@ class CalendarFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val initialDate = Date() // Fecha actual
+        val initialDate = Date()
         weekPagerAdapter = WeekPagerAdapter(initialDate)
-
         binding.weekViewPager.adapter = weekPagerAdapter
-
-        // Establecer la posición inicial en el medio para permitir navegación infinita
         binding.weekViewPager.setCurrentItem(Int.MAX_VALUE / 2, false)
     }
 

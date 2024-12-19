@@ -18,26 +18,19 @@ class WeekPagerAdapter(
             val calendar = Calendar.getInstance().apply { time = weekStartDate }
             val dateFormat = SimpleDateFormat("d", Locale.getDefault())
 
-            // Asignar cada día a su correspondiente TextView
-            binding.day1.text = "${dateFormat.format(calendar.time)}"
+            binding.day1.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day2.text = "${dateFormat.format(calendar.time)}"
+            binding.day2.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day3.text = "${dateFormat.format(calendar.time)}"
+            binding.day3.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day4.text = "${dateFormat.format(calendar.time)}"
+            binding.day4.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day5.text = "${dateFormat.format(calendar.time)}"
+            binding.day5.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day6.text = "${dateFormat.format(calendar.time)}"
+            binding.day6.text = dateFormat.format(calendar.time)
             calendar.add(Calendar.DAY_OF_MONTH, 1)
-
-            binding.day7.text = "${dateFormat.format(calendar.time)}"
+            binding.day7.text = dateFormat.format(calendar.time)
         }
     }
 
@@ -58,7 +51,6 @@ class WeekPagerAdapter(
     override fun getItemCount(): Int = Int.MAX_VALUE
 
     private fun getStartOfWeek(calendar: Calendar): Date {
-        // Establecer el lunes como inicio de la semana
         calendar.firstDayOfWeek = Calendar.MONDAY
         val currentDow = calendar.get(Calendar.DAY_OF_WEEK)
         val diff = when (currentDow) {

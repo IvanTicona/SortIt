@@ -29,17 +29,14 @@ class CalendarFragment : Fragment() {
         _binding = FragmentCalendarBinding.inflate(inflater, container, false)
         return binding.root
     }
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val initialDate = Date()
 
         calendarViewModel = ViewModelProvider(requireActivity())[CalendarViewModel::class.java]
         weekPagerAdapter = WeekPagerAdapter(initialDate, calendarViewModel)
-        dateDetailPagerAdapter = DateDetailPagerAdapter(initialDate)
+        dateDetailPagerAdapter = DateDetailPagerAdapter(initialDate, requireContext())
+
         binding.weekViewPager.adapter = weekPagerAdapter
         binding.dateDetailViewPager.adapter = dateDetailPagerAdapter
         binding.weekViewPager.setCurrentItem(centralPosition, false)
@@ -98,6 +95,10 @@ class CalendarFragment : Fragment() {
                 }
             }
         })
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun getWeekOffset(initialDate: Date, targetDate: Date): Int {

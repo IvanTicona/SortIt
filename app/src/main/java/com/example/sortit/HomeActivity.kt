@@ -23,8 +23,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intentShowList)
         }
         binding.createTaskBtn.setOnClickListener {
-//            val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
-            val intentCreateTask = Intent(this, CalendarActivity::class.java)
+            val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
             startActivity(intentCreateTask)
         }
     }

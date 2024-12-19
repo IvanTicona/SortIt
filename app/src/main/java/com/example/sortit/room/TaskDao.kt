@@ -13,6 +13,8 @@ interface TaskDao {
     fun getAllTasks(): List<Task>
     @Query("SELECT * FROM tasks WHERE id = :id")
     fun getTaskById(id: Int): Task
+    @Query("SELECT * FROM tasks WHERE fechaEmpieza = :dateMilis")
+    fun getTasksForDate(dateMilis: Long): List<Task>
     @Insert
     fun createTask(task: Task)
     @Delete

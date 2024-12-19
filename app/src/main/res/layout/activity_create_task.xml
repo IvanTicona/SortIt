@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,6 +24,7 @@
             android:layout_marginBottom="15dp"
         >
             <ImageView
+                android:contentDescription="@string/arrow_to_exit"
                 android:id="@+id/arrowLeft"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
@@ -35,7 +37,7 @@
                 android:id="@+id/headerScreen"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Crear Nueva Actividad"
+                android:text="@string/crear_nueva_actividad"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,11 +67,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:textSize="17sp"
-                    android:hint="Titulo"
+                    android:hint="@string/titulo"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
                     style="@style/text_normal_white"
+                    android:inputType="text"
+                    android:autofillHints=""
                     />
                 <com.google.android.material.divider.MaterialDivider
                     android:id="@+id/dividertitle"
@@ -88,11 +92,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:textSize="17sp"
-                    android:hint="Ubicacion"
+                    android:hint="@string/ubicacion"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:backgroundTint="@color/darkpurple"
                     style="@style/text_normal_white"
+                    android:inputType="text"
+                    android:autofillHints=""
                     />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -118,7 +124,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/allDaySwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todo el dia"
+                    android:text="@string/todo_el_dia"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
@@ -150,7 +156,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:text="Empieza"
+                    android:text="@string/empieza"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
@@ -169,7 +175,7 @@
                         android:id="@+id/dateStartPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="01/01/2000"
+                        android:hint="@string/sample_date"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -190,7 +196,7 @@
                         android:id="@+id/hourStartPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="00:00"
+                        android:hint="@string/sample_time"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -215,7 +221,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:text="Termina"
+                    android:text="@string/termina"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
@@ -235,7 +241,7 @@
                         android:id="@+id/dateEndPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="01/01/2000"
+                        android:hint="@string/sample_date"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -257,7 +263,7 @@
                         android:id="@+id/hourEndPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="00:00"
+                        android:hint="@string/sample_time"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -303,6 +309,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                 />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -322,7 +329,6 @@
                     style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/darkpurple"
                     android:hint="@string/correo"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
@@ -341,19 +347,21 @@
                 />
                 <EditText
                     android:id="@+id/bindNotes"
-                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="@color/darkpurple"
-                    android:gravity="top"
+                    android:textSize="17sp"
                     android:hint="@string/notas"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:textSize="17sp"
+                    android:backgroundTint="@color/darkpurple"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:autofillHints=""
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"/>
                 />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -371,7 +379,7 @@
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="Cancelar"
+                android:text="@string/cancelar"
                 android:textSize="20sp"
                 android:backgroundTint="@color/purplebar"
                 app:cornerRadius="15dp"
@@ -392,7 +400,7 @@
                 android:layout_height="match_parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="Guardar"
+                android:text="@string/guardar"
                 android:textSize="20sp"
                 android:backgroundTint="@color/purplebar"
                 app:cornerRadius="15dp"

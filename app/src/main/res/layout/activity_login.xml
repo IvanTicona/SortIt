@@ -30,6 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         >
         <ImageView
+            android:contentDescription="@string/google_logo"
             android:layout_width="35dp"
             android:layout_height="35dp"
             app:layout_constraintStart_toStartOf="@id/button_log_google"
@@ -48,11 +49,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Continuar con Google"
+            android:text="@string/continuar_con_google"
             app:cornerRadius = "15dp"
             android:textSize="20sp"
         />
         <ImageView
+            android:contentDescription="@string/mail_icon"
             android:layout_width="35dp"
             android:layout_height="35dp"
             app:layout_constraintStart_toStartOf="@id/button_log_correo"
@@ -71,7 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/button_log_google"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Continuar con correo"
+            android:text="@string/continuar_con_correo"
             app:cornerRadius = "15dp"
             android:textSize="20sp"
         />
@@ -81,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/transparent"
-            android:text="Crear cuenta"
+            android:text="@string/crear_cuenta"
             app:layout_constraintTop_toBottomOf="@+id/button_log_correo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -45,7 +45,9 @@
                     android:layout_width="350dp"
                     android:layout_height="65dp"
                     android:backgroundTint="@color/white"
-                    android:hint="Ingrese su nombre"
+                    android:hint="@string/ingrese_su_nombre"
+                    android:inputType="text"
+                    android:autofillHints="name"
                     android:paddingStart="20dp"
                     />
             </androidx.cardview.widget.CardView>
@@ -64,7 +66,9 @@
                     android:layout_width="350dp"
                     android:layout_height="65dp"
                     android:backgroundTint="@color/white"
-                    android:hint="Ingrese su correo"
+                    android:hint="@string/ingrese_su_correo"
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="emailAddress"
                     android:paddingStart="20dp"
                     />
             </androidx.cardview.widget.CardView>
@@ -83,7 +87,9 @@
                     android:layout_width="350dp"
                     android:layout_height="65dp"
                     android:backgroundTint="@color/white"
-                    android:hint="Ingrese su contraseña"
+                    android:hint="@string/ingrese_su_contra"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
                     android:paddingStart="20dp"
                     />
             </androidx.cardview.widget.CardView>
@@ -103,12 +109,15 @@
                     android:layout_width="350dp"
                     android:layout_height="65dp"
                     android:backgroundTint="@color/white"
-                    android:hint="Confirmar contraseña"
+                    android:hint="@string/confirmar_contra"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
                     android:paddingStart="20dp"
                     />
             </androidx.cardview.widget.CardView>
 
             <ImageView
+                android:contentDescription="@string/create_account_logo"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 app:layout_constraintStart_toStartOf="@id/SignUpButton"
@@ -127,7 +136,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/confirm_password"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:text="Crear cuenta"
+                android:text="@string/crear_cuenta"
                 app:cornerRadius = "15dp"
                 android:textSize="20sp"
                 />

@@ -45,8 +45,11 @@
                 android:layout_width="350dp"
                 android:layout_height="65dp"
                 android:backgroundTint="@color/white"
-                android:hint="Ingrese su correo"
+                android:hint="@string/ingrese_su_correo"
                 android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
             />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -64,11 +67,15 @@
                 android:layout_width="350dp"
                 android:layout_height="65dp"
                 android:backgroundTint="@color/white"
-                android:hint="Ingrese su contrasenia"
+                android:hint="@string/ingrese_su_contra"
                 android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:inputType="textPassword"
+                android:autofillHints="password"
             />
         </androidx.cardview.widget.CardView>
         <ImageView
+            android:contentDescription="@string/arrow_door"
             android:layout_width="35dp"
             android:layout_height="35dp"
             app:layout_constraintStart_toStartOf="@id/SignInButton"
@@ -87,7 +94,7 @@
             app:layout_constraintTop_toBottomOf="@+id/password"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="INGRESAR"
+            android:text="@string/ingresar"
             app:cornerRadius = "15dp"
             android:textSize="20sp"
         />

@@ -57,7 +57,30 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
-    private fun createAccount(email: String, password: String, name: String) {
+    private fun validateMail(email: String): Boolean {
+        val regexMail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        return email.matches(Regex(regexMail))
+    }
+
+    private fun validatePassword(password: String): Boolean {
+        val regexPswd = """^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?":{}|<>])[A-Za-z\d!@#\$%^&*(),.?":{}|<>]{8,}$""".toRegex()
+        return regexPswd.matches(password)
+    }
+
+    fun createAccount(email: String, password: String, name: String) {
+        //Validations
+        if (!validateMail(email)) {
+            Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (!validatePassword(password)) {
+            Toast.makeText(
+                this,
+                "Password must have at least 8 characters, one uppercase letter, one lowercase letter, and one special character",
+                Toast.LENGTH_LONG
+            ).show()
+            return
+        }
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {

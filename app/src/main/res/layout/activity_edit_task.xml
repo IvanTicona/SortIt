@@ -14,8 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="15dp"
-        android:orientation="vertical"
-    >
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -23,13 +22,14 @@
             android:layout_marginBottom="15dp">
 
             <ImageView
+                android:contentDescription="@string/arrow_to_exit"
                 android:id="@+id/arrowLeft"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/arrowleft"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
             <TextView
                 android:id="@+id/headerScreen"
@@ -37,7 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/editar_actividad"
-                android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -50,22 +49,20 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/darkpurple"
-            app:cardCornerRadius="15dp"
-        >
+            app:cardCornerRadius="15dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-            >
+                android:layout_marginHorizontal="15dp">
 
                 <EditText
                     android:id="@+id/createName"
                     style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:backgroundTint="@color/darkpurple"
                     android:hint="@string/titulo"
+                    android:backgroundTint="@color/darkpurple"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
                     android:textSize="17sp"
@@ -94,7 +91,9 @@
                     android:textSize="17sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividertitle" />
+                    app:layout_constraintTop_toBottomOf="@+id/dividertitle"
+                    android:inputType="text"
+                    android:autofillHints=""/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -103,14 +102,14 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/darkpurple"
             app:cardCornerRadius="15dp"
-            android:layout_marginBottom="15dp"
-            >
+            android:layout_marginBottom="15dp">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
-                android:paddingVertical="10dp"
-                >
+                android:paddingVertical="10dp">
+
                 <TextView
                     android:id="@+id/labelSwitch"
                     app:layout_constraintStart_toStartOf="parent"
@@ -118,11 +117,11 @@
                     app:layout_constraintBottom_toBottomOf="@+id/allDaySwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Todo el dia"
+                    android:text="@string/todo_el_dia"
                     android:textSize="17sp"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/psregular"
-                    />
+                    android:fontFamily="@font/psregular"/>
+
                 <Switch
                     android:id="@+id/allDaySwitch"
                     app:layout_constraintTop_toTopOf="parent"
@@ -141,8 +140,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     app:dividerColor="@color/darkgray"
-                    android:layout_marginVertical="10dp"
-                    />
+                    android:layout_marginVertical="10dp"/>
+
                 <TextView
                     android:id="@+id/dateStart"
                     app:layout_constraintTop_toBottomOf="@id/dividerDateStart"
@@ -150,7 +149,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:text="Empieza"
+                    android:text="@string/empieza"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
@@ -169,7 +168,7 @@
                         android:id="@+id/dateStartPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="01/01/2000"
+                        android:hint="@string/sample_date"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -190,7 +189,7 @@
                         android:id="@+id/hourStartPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="00:00"
+                        android:hint="@string/sample_time"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -206,8 +205,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     app:dividerColor="@color/darkgray"
-                    android:layout_marginVertical="10dp"
-                    />
+                    android:layout_marginVertical="10dp"/>
+
                 <TextView
                     android:id="@+id/dateEnd"
                     app:layout_constraintTop_toBottomOf="@id/dividerDateEnd"
@@ -215,7 +214,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:text="Termina"
+                    android:text="@string/termina"
                     android:textSize="17sp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/psregular"
@@ -235,7 +234,7 @@
                         android:id="@+id/dateEndPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="01/01/2000"
+                        android:hint="@string/sample_date"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -257,7 +256,7 @@
                         android:id="@+id/hourEndPicker"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:hint="00:00"
+                        android:hint="@string/sample_time"
                         android:textColorHint="@color/darkgray"
                         android:textSize="17sp"
                         android:textColor="@color/white"
@@ -315,8 +314,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-            >
+                android:layout_marginHorizontal="15dp">
+
                 <EditText
                     android:id="@+id/bindEmail"
                     style="@style/text_normal_white"
@@ -340,19 +339,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/bindEmail"
                 />
                 <EditText
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
                     android:id="@+id/bindNotes"
-                    style="@style/text_normal_white"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:backgroundTint="@color/darkpurple"
-                    android:gravity="top"
+                    android:textSize="17sp"
                     android:hint="@string/notas"
                     android:textColor="@color/white"
                     android:textColorHint="@color/darkgray"
-                    android:textSize="17sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/dividerNotes"
-                />
+                    android:backgroundTint="@color/darkpurple"
+                    style="@style/text_normal_white"
+                    android:gravity="top"
+                    android:inputType="text"
+                    android:autofillHints=""/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

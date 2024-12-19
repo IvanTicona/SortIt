@@ -48,7 +48,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/titleIcon"
                 android:layout_marginStart="20dp"
-            />
+                style="@style/text_semibold_white"
+
+                />
             <ImageView
                 android:id="@+id/searchIcon"
                 android:layout_width="30dp"
@@ -86,7 +88,9 @@
                     android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                />
+                    style="@style/text_semibold_white"
+
+                    />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
@@ -126,13 +130,14 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Crea nueva"
-                                android:textSize="25sp"
+                                android:text="Crear una nueva tarea"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_margin="15dp"
                                 android:textColor="@color/white"
-                            />
+                                style="@style/text_semibold_white"
+
+                                />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
                     <Space
@@ -169,12 +174,12 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Edit/Delete"
-                                android:textSize="25sp"
+                                android:text="Todas las actividades"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
                                 android:layout_margin="15dp"
                                 android:textColor="@color/white"
+                                style="@style/text_semibold_white"
                                 />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </androidx.cardview.widget.CardView>
@@ -198,6 +203,7 @@
                     android:textColor="@color/white"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    style="@style/text_semibold_white"
                     />
                 <HorizontalScrollView
                     android:layout_width="wrap_content"

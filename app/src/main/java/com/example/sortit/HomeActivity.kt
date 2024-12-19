@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.databinding.ActivityHomeBinding
+import com.example.sortit.settingScreens.SettingsActivity
 import com.example.sortit.taskScreens.CreateTaskActivity
 import com.example.sortit.taskScreens.ListTasksActivity
 
@@ -25,5 +26,16 @@ class HomeActivity : AppCompatActivity() {
             val intentCreateTask = Intent(this, CreateTaskActivity::class.java)
             startActivity(intentCreateTask)
         }
+
+        binding.searchIcon.setOnClickListener(){
+            val intent = Intent(this, SearchActivity::class.java)
+            startActivity(intent)
+
+        }
+        binding.settingsIcon.setOnClickListener(){
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

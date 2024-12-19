@@ -2,6 +2,7 @@ package com.example.sortit.loginScreens
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sortit.HomeActivity
 import com.example.sortit.SearchActivity
@@ -28,9 +29,7 @@ class LoginEmailActivity : AppCompatActivity() {
             val email = binding.emailInput.text.toString()
             val password = binding.passwordInput.text.toString()
             signIn(email, password)
-            createAccount(email, password)
         }
-
     }
 
 
@@ -45,26 +44,30 @@ class LoginEmailActivity : AppCompatActivity() {
         }
     }
 
-//     Funcion para pantalla Crear Cuenta
-    fun createAccount(email: String, password: String){
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    println("createUserWithEmail:success")
-                    val user = auth.currentUser
-                    // updateUI(user)
-                } else {
-                    // If sign in fails, display a message to the user.
-                    println("createUserWithEmail:failure")
-                    println(task.exception)
-                    // updateUI(null)
-                }
-            }
+    private fun validateEmail(email: String): Boolean {
+        val regexEmail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
+        return email.matches(Regex(regexEmail))
+    }
+
+    private fun validatePassword(password: String): Boolean {
+        val regexPswd = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?\":{}|<>])[A-Za-z\\d!@#\$%^&*(),.?\":{}|<>]{8,}$"
+        return password.matches(Regex(regexPswd))
     }
 
     fun signIn(email: String, password: String){
         // Validaciones
+        if(!validateEmail(email)) {
+            Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if(!validatePassword(password)) {
+            Toast.makeText(
+                this, "Password must have at least 8 characters," +
+                        " one uppercase letter, one lowercase letter, and one special character",
+                Toast.LENGTH_LONG
+            ).show()
+            return
+        }
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){ task ->
                 if (task.isSuccessful) {
@@ -77,6 +80,4 @@ class LoginEmailActivity : AppCompatActivity() {
                 }
             }
     }
-
-
 }

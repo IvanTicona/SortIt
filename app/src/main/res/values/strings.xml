@@ -106,4 +106,8 @@
     <string name="trabajo">Trabajo</string>
     <string name="academicn">academicn</string>
     <string name="educacion">Educación</string>
+    <string name="crear_cuenta">Crear cuenta</string>
+    <string name="ingrese_su_nombre">Ingrese su nombre</string>
+    <string name="confirmar_contra">Confirmar contraseña</string>
+    <string name="create_account_logo">create_account_logo</string>
 </resources>
